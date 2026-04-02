@@ -1,0 +1,48 @@
+# [Python]
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# [Gurobi]
+gurobi.log
+
+# [Xilinx/HLS]
+*.log
+*.jou
+*.pb
+*.str
+*.tcl
+!write_tcl.py
+!script/**/*.tcl
+!evaluation/tcl_scripts/**/*.tcl
+output_dir/
+cfile/
+vitis_hls.log
+vivado.log
+vivado_hls.log
+
+# [IDE/OS]
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# [Others]
+graph.png
+*.swp
+*.swo

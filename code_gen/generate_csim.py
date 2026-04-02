@@ -275,7 +275,14 @@ class CSIM:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt.split("_")[0]]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt.split("_")[0]]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         res = ltc[0]
                         for i, o in enumerate(op):
@@ -301,7 +308,14 @@ class CSIM:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         
                         res = ltc[0]
@@ -572,7 +586,8 @@ class CSIM:
         need_many_def = {}
         for arg in new_arg:
             if "[" in arg:
-                name = self.extract_name(arg).replace("v", "").split("_for")[0]
+                name = self.extract_name(arg).split("_for")[0]
+                name = name[1:] if name.startswith("v") else name
                 if name in need_many_def:
                     need_many_def[name] += 1
                 else:
@@ -1164,7 +1179,8 @@ class CSIM:
             else:
                 name = ""
 
-            name_ = arg.split(" ")[-1].split("_")[0].replace("v", "").replace(" ", "")
+            name_ = arg.split(" ")[-1].split("_")[0].replace(" ", "")
+            name_ = name_[1:] if name_.startswith("v") else name_
             name += name_
             name_array = name.split(" ")[-1].replace(" ", "")
 
@@ -1230,7 +1246,8 @@ class CSIM:
             if data_type == "float" and "[" in arg:
                 name = f"({data_type}1 *) "
 
-            name_ = arg.split(" ")[-1].split("_")[0].replace("v", "").replace(" ", "")
+            name_ = arg.split(" ")[-1].split("_")[0].replace(" ", "")
+            name_ = name_[1:] if name_.startswith("v") else name_
             name += name_
             name_array = name.split(" ")[-1].replace(" ", "")
 

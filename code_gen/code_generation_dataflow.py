@@ -307,7 +307,14 @@ class CodeGeneration:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt.split("_")[0]]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt.split("_")[0]]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         res = ltc[0]
                         for i, o in enumerate(op):
@@ -333,7 +340,14 @@ class CodeGeneration:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         
                         res = ltc[0]
@@ -796,8 +810,11 @@ class CodeGeneration:
                             it_ = [it_]
                         
                         for it__ in it_:
-                            it__ = it__.replace("(", "").replace(")", "")
-                            it_per_dim[i][j] += [it_to_loop[it__]]
+                            it__ = it__.replace("(", "").replace(")", "").strip()
+                            if it__.isnumeric():
+                                continue
+                            if it__ in it_to_loop:
+                                it_per_dim[i][j] += [it_to_loop[it__]]
 
 
                 
@@ -1337,7 +1354,8 @@ class CodeGeneration:
                     for arg in self.arguments:
                         if array in arg:
                             original_def = arg
-                            nname = arg.split(" ")[-1].split("[")[0].replace("v", "")
+                            nname = arg.split(" ")[-1].split("[")[0]
+                            nname = nname[1:] if nname.startswith("v") else nname
                             original_name = f"v{nname}_for_task{first_read[nname]}"
                             break
                     task_id = self.task_to_FT[task]
@@ -1548,7 +1566,8 @@ class CodeGeneration:
                 shift = "    "
                 id_task = int(original_name.split("for_task")[-1])
                 id_ft = self.task_to_FT[id_task]
-                name_array = original_name.split("_")[0].replace("v", "")
+                name_array = original_name.split("_")[0]
+                name_array = name_array[1:] if name_array.startswith("v") else name_array
 
                 size_ = 1
                 for k in range(len(self.info_padding[id_ft][name_array])-1):
@@ -1609,7 +1628,8 @@ class CodeGeneration:
             code += f"#pragma HLS inline off\n"
             shift = "    "
             # here if we have differend padding we need to check for each FT
-            name_arr = original_def.split(" ")[-1].split("[")[0].replace("v", "")
+            name_arr = original_def.split(" ")[-1].split("[")[0]
+            name_arr = name_arr[1:] if name_arr.startswith("v") else name_arr
             id_task = original_name.split("for_task")[-1]
             id_ft = self.task_to_FT[int(id_task)]
             tc_arr = list(map(int, self.info_padding[id_ft][name_arr]))
@@ -2569,7 +2589,7 @@ class CodeGeneration:
             if "]" in arg:
                 name = arg.split("[")[0].split(" ")[-1]
                 if name not in cur_array:
-                    cur_array += [name.replace("v", "")]
+                    cur_array += [name[1:] if name.startswith("v") else name]
         
         # info_arr = {}
         # first_read = {}
