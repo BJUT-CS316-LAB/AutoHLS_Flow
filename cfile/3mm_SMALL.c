@@ -6,8 +6,6 @@ void kernel_3mm(int ni,int nj,int nk,int nl,int nm,float E[40][50],float A[40][6
   int i;
   int j;
   int k;
-{
-    
     
     
     for (i = 0; i < 40; i++) {
@@ -52,5 +50,4 @@ void kernel_3mm(int ni,int nj,int nk,int nl,int nm,float E[40][50],float A[40][6
         }
       }
     }
-  }
 }

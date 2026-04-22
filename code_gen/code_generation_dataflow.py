@@ -307,7 +307,14 @@ class CodeGeneration:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt.split("_")[0]]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt.split("_")[0]]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         res = ltc[0]
                         for i, o in enumerate(op):
@@ -333,7 +340,14 @@ class CodeGeneration:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         
                         res = ltc[0]
@@ -796,8 +810,11 @@ class CodeGeneration:
                             it_ = [it_]
                         
                         for it__ in it_:
-                            it__ = it__.replace("(", "").replace(")", "")
-                            it_per_dim[i][j] += [it_to_loop[it__]]
+                            it__ = it__.replace("(", "").replace(")", "").strip()
+                            if it__.isnumeric():
+                                continue
+                            if it__ in it_to_loop:
+                                it_per_dim[i][j] += [it_to_loop[it__]]
 
 
                 

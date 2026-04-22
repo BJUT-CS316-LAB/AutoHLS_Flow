@@ -5431,3 +5431,4432 @@ Solution count 0
 
 Model is infeasible
 Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Wed Mar 11 11:02:48 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 40 rows, 190 columns and 105 nonzeros (Min)
+Model fingerprint: 0x965031e8
+Model has 1 linear objective coefficients
+Model has 32 quadratic constraints
+Model has 14 simple general constraints
+  7 MAX, 7 MIN
+Model has 50 general nonlinear constraints (169 nonlinear terms)
+Variable types: 93 continuous, 97 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 8e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 7e+04]
+  RHS range        [1e+00, 8e+00]
+  QRHS range       [3e+01, 2e+04]
+  NLCon coe range  [1e+00, 8e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 23 nlconstr
+Added 58 variables to disaggregate expressions
+Presolve added 10 rows and 0 columns
+Presolve removed 0 rows and 52 columns
+Presolve time: 0.01s
+Presolved: 404 rows, 338 columns, 1000 nonzeros
+Presolved model has 76 SOS constraint(s)
+Presolved model has 25 bilinear constraint(s)
+Presolved model has 3 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 70 continuous, 268 integer (72 binary)
+
+Root relaxation: objective 1.087455e+04, 64 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 10874.5478    0   34          - 10874.5478      -     -    0s
+H    0     0                    196062.06250 10874.5478  94.5%     -    0s
+H    0     0                    52141.312500 10874.5478  79.1%     -    0s
+     0     0 13269.6056    0   40 52141.3125 13269.6056  74.6%     -    0s
+     0     0 16090.3162    0   56 52141.3125 16090.3162  69.1%     -    0s
+     0     0 16334.8033    0   56 52141.3125 16334.8033  68.7%     -    0s
+     0     0 17510.8718    0   40 52141.3125 17510.8718  66.4%     -    0s
+     0     0 18976.2818    0   34 52141.3125 18976.2818  63.6%     -    0s
+     0     0 21881.5337    0   31 52141.3125 21881.5337  58.0%     -    0s
+     0     0 21882.4531    0   31 52141.3125 21882.4531  58.0%     -    0s
+     0     0 28274.8992    0   56 52141.3125 28274.8992  45.8%     -    0s
+     0     0 28291.9366    0   54 52141.3125 28291.9366  45.7%     -    0s
+     0     0 28303.7188    0   50 52141.3125 28303.7188  45.7%     -    0s
+     0     0 28314.7436    0   42 52141.3125 28314.7436  45.7%     -    0s
+     0     0 28347.2496    0   53 52141.3125 28347.2496  45.6%     -    0s
+     0     0 38798.7886    0   31 52141.3125 38798.7886  25.6%     -    0s
+     0     0 38798.7886    0   31 52141.3125 38798.7886  25.6%     -    0s
+     0     0 38798.7886    0   31 52141.3125 38798.7886  25.6%     -    0s
+     0     2 39920.7011    0   31 52141.3125 39920.7011  23.4%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 5
+  Flow cover: 1
+  RLT: 7
+  Relax-and-lift: 1
+
+Explored 3 nodes (340 simplex iterations) in 0.08 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 52141.3 196062 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.214131250000e+04, best bound 5.214131250000e+04, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Wed Mar 11 11:09:35 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 35 rows, 125 columns and 98 nonzeros (Min)
+Model fingerprint: 0xa4cdbd8a
+Model has 1 linear objective coefficients
+Model has 29 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 75 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 7e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 2e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 11 rows and 31 columns
+Presolve time: 0.00s
+Presolved: 296 rows, 256 columns, 729 nonzeros
+Presolved model has 69 SOS constraint(s)
+Presolved model has 17 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 200 integer (64 binary)
+
+Root relaxation: objective 2.322551e+03, 55 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2322.55074    0   32          - 2322.55074      -     -    0s
+H    0     0                    2757.0000000 2322.55074  15.8%     -    0s
+H    0     0                    2554.0000000 2322.55074  9.06%     -    0s
+H    0     0                    2545.7500000 2322.55074  8.77%     -    0s
+     0     0 2541.17103    0    3 2545.75000 2541.17103  0.18%     -    0s
+H    0     0                    2541.6250000 2541.17103  0.02%     -    0s
+
+Explored 1 nodes (78 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2541.62 2545.75 2554 2757 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.541625000000e+03, best bound 2.541625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Wed Mar 11 11:27:04 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 132 rows, 563 columns and 373 nonzeros (Min)
+Model fingerprint: 0x1615ecd2
+Model has 1 linear objective coefficients
+Model has 107 quadratic constraints
+Model has 35 simple general constraints
+  17 MAX, 14 MIN, 4 AND
+Model has 137 general nonlinear constraints (470 nonlinear terms)
+Variable types: 253 continuous, 310 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+05]
+  RHS range        [1e+00, 3e+01]
+  QRHS range       [3e+01, 2e+04]
+  NLCon coe range  [1e+00, 2e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 328 variables to disaggregate expressions
+Presolve added 91 rows and 0 columns
+Presolve removed 0 rows and 66 columns
+Presolve time: 0.01s
+Presolved: 1645 rows, 1399 columns, 4142 nonzeros
+Presolved model has 355 SOS constraint(s)
+Presolved model has 93 bilinear constraint(s)
+Presolved model has 9 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 416 continuous, 983 integer (339 binary)
+
+Root relaxation: objective 7.908331e+03, 295 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (345 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Wed Mar 11 11:27:23 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 132 rows, 563 columns and 373 nonzeros (Min)
+Model fingerprint: 0x2f9b6430
+Model has 1 linear objective coefficients
+Model has 107 quadratic constraints
+Model has 35 simple general constraints
+  17 MAX, 14 MIN, 4 AND
+Model has 137 general nonlinear constraints (470 nonlinear terms)
+Variable types: 253 continuous, 310 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+05]
+  RHS range        [1e+00, 3e+01]
+  QRHS range       [3e+01, 2e+05]
+  NLCon coe range  [1e+00, 2e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 328 variables to disaggregate expressions
+Presolve added 91 rows and 0 columns
+Presolve removed 0 rows and 66 columns
+Presolve time: 0.01s
+Presolved: 1645 rows, 1399 columns, 4142 nonzeros
+Presolved model has 355 SOS constraint(s)
+Presolved model has 93 bilinear constraint(s)
+Presolved model has 9 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 416 continuous, 983 integer (339 binary)
+
+Root relaxation: objective 7.908331e+03, 217 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 7908.33146    0  108          - 7908.33146      -     -    0s
+     0     0 7908.35310    0  104          - 7908.35310      -     -    0s
+H    0     0                    1.709178e+07 7908.35310   100%     -    0s
+     0     0 17042.9318    0  252 1.7092e+07 17042.9318   100%     -    0s
+     0     0 17042.9318    0  251 1.7092e+07 17042.9318   100%     -    0s
+     0     0 17085.5002    0  255 1.7092e+07 17085.5002   100%     -    0s
+H    0     0                    3242619.6875 17085.5002  99.5%     -    0s
+H    0     0                    1415010.3750 17085.5002  98.8%     -    0s
+     0     0 19082.4763    0  248 1415010.37 19082.4763  98.7%     -    0s
+H    0     0                    1330622.8125 19107.6944  98.6%     -    0s
+     0     0 21488.1448    0  246 1330622.81 21488.1448  98.4%     -    0s
+     0     0 21881.4343    0  276 1330622.81 21881.4343  98.4%     -    0s
+H    0     0                    1122850.1250 22246.3325  98.0%     -    0s
+     0     0 22246.3325    0  278 1122850.12 22246.3325  98.0%     -    0s
+     0     0 25713.5202    0  280 1122850.12 25713.5202  97.7%     -    0s
+     0     0 25830.9465    0  279 1122850.12 25830.9465  97.7%     -    0s
+     0     0 28513.6402    0  171 1122850.12 28513.6402  97.5%     -    0s
+H    0     0                    1088415.1250 28513.6402  97.4%     -    0s
+     0     0 52246.4853    0  281 1088415.12 52246.4853  95.2%     -    0s
+     0     0 52246.5625    0  272 1088415.12 52246.5625  95.2%     -    0s
+H    0     0                    1055631.1250 52246.5625  95.1%     -    0s
+     0     0 52246.5625    0  275 1055631.12 52246.5625  95.1%     -    0s
+     0     0 96817.3144    0  194 1055631.12 96817.3144  90.8%     -    0s
+H    0     0                    1030840.2500 96817.3144  90.6%     -    0s
+H    0     0                    1030837.2500 96817.3144  90.6%     -    0s
+     0     0 96859.2915    0  273 1030837.25 96859.2915  90.6%     -    0s
+     0     0 96859.2915    0  272 1030837.25 96859.2915  90.6%     -    0s
+H    0     0                    1027608.4375 171116.422  83.3%     -    0s
+     0     0 172622.257    0  290 1027608.44 172622.257  83.2%     -    0s
+     0     0 173828.267    0  285 1027608.44 173828.267  83.1%     -    0s
+     0     0 221117.815    0  298 1027608.44 221117.815  78.5%     -    0s
+     0     0 226247.234    0  297 1027608.44 226247.234  78.0%     -    0s
+     0     0 381177.043    0  306 1027608.44 381177.043  62.9%     -    0s
+     0     0 400793.026    0  300 1027608.44 400793.026  61.0%     -    0s
+     0     0 400793.026    0  243 1027608.44 400793.026  61.0%     -    0s
+     0     2 400793.026    0  241 1027608.44 400793.026  61.0%     -    0s
+H   93    54                    1026995.6875 1022455.11  0.44%  56.4    0s
+H   98    54                    1023794.5625 1022841.00  0.09%  54.8    0s
+H  207   142                    1023314.5625 1022850.52  0.05%  32.1    0s
+H  522    80                    1023314.5000 1023192.34  0.01%  16.2    0s
+
+Cutting planes:
+  Learned: 4
+  Gomory: 4
+  Cover: 6
+  Implied bound: 211
+  Clique: 6
+  MIR: 100
+  StrongCG: 10
+  Flow cover: 31
+  Zero half: 2
+  RLT: 78
+  Relax-and-lift: 79
+  BQP: 4
+  PSD: 1
+
+Explored 775 nodes (12252 simplex iterations) in 0.86 seconds (0.39 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 1.02331e+06 1.02331e+06 1.02379e+06 ... 1.12285e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.023314500000e+06, best bound 1.023292252352e+06, gap 0.0022%
+
+Gurobi 13.0.0 (linux64) logging started Wed Mar 11 11:27:43 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 132 rows, 563 columns and 373 nonzeros (Min)
+Model fingerprint: 0xb5b9e74f
+Model has 1 linear objective coefficients
+Model has 107 quadratic constraints
+Model has 35 simple general constraints
+  17 MAX, 14 MIN, 4 AND
+Model has 137 general nonlinear constraints (470 nonlinear terms)
+Variable types: 253 continuous, 310 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+05]
+  RHS range        [1e+00, 3e+01]
+  QRHS range       [3e+01, 2e+04]
+  NLCon coe range  [1e+00, 2e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 328 variables to disaggregate expressions
+Presolve added 91 rows and 0 columns
+Presolve removed 0 rows and 66 columns
+Presolve time: 0.01s
+Presolved: 1645 rows, 1399 columns, 4142 nonzeros
+Presolved model has 355 SOS constraint(s)
+Presolved model has 93 bilinear constraint(s)
+Presolved model has 9 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 416 continuous, 983 integer (339 binary)
+
+Root relaxation: objective 7.908331e+03, 264 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (308 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Mar 12 06:21:13 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 35 rows, 125 columns and 98 nonzeros (Min)
+Model fingerprint: 0x8828bebb
+Model has 1 linear objective coefficients
+Model has 29 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 75 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 11 rows and 31 columns
+Presolve time: 0.01s
+Presolved: 311 rows, 268 columns, 765 nonzeros
+Presolved model has 75 SOS constraint(s)
+Presolved model has 17 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 212 integer (67 binary)
+
+Root relaxation: objective 2.322551e+03, 53 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2322.55074    0   30          - 2322.55074      -     -    0s
+H    0     0                    2757.0000000 2322.55074  15.8%     -    0s
+H    0     0                    2554.0000000 2322.55074  9.06%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+H    0     0                    2545.3750000 2541.16667  0.17%     -    0s
+H    0     0                    2541.6250000 2541.16667  0.02%     -    0s
+     0     0 2541.16667    0    3 2541.62500 2541.16667  0.02%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Implied bound: 6
+  MIR: 6
+  Flow cover: 1
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 1 nodes (87 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2541.62 2545.37 2554 2757 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.541625000000e+03, best bound 2.541625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Mar 12 06:25:29 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 35 rows, 125 columns and 98 nonzeros (Min)
+Model fingerprint: 0x8828bebb
+Model has 1 linear objective coefficients
+Model has 29 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 75 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 11 rows and 31 columns
+Presolve time: 0.00s
+Presolved: 311 rows, 268 columns, 765 nonzeros
+Presolved model has 75 SOS constraint(s)
+Presolved model has 17 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 212 integer (67 binary)
+
+Root relaxation: objective 2.322551e+03, 53 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2322.55074    0   30          - 2322.55074      -     -    0s
+H    0     0                    2757.0000000 2322.55074  15.8%     -    0s
+H    0     0                    2554.0000000 2322.55074  9.06%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+H    0     0                    2545.3750000 2541.16667  0.17%     -    0s
+H    0     0                    2541.6250000 2541.16667  0.02%     -    0s
+     0     0 2541.16667    0    3 2541.62500 2541.16667  0.02%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Implied bound: 6
+  MIR: 6
+  Flow cover: 1
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 1 nodes (87 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2541.62 2545.37 2554 2757 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.541625000000e+03, best bound 2.541625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Mar 12 08:44:34 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 35 rows, 125 columns and 98 nonzeros (Min)
+Model fingerprint: 0x8828bebb
+Model has 1 linear objective coefficients
+Model has 29 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 75 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 11 rows and 31 columns
+Presolve time: 0.00s
+Presolved: 311 rows, 268 columns, 765 nonzeros
+Presolved model has 75 SOS constraint(s)
+Presolved model has 17 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 212 integer (67 binary)
+
+Root relaxation: objective 2.322551e+03, 53 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2322.55074    0   30          - 2322.55074      -     -    0s
+H    0     0                    2757.0000000 2322.55074  15.8%     -    0s
+H    0     0                    2554.0000000 2322.55074  9.06%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+     0     0 2541.16667    0    3 2554.00000 2541.16667  0.50%     -    0s
+H    0     0                    2545.3750000 2541.16667  0.17%     -    0s
+H    0     0                    2541.6250000 2541.16667  0.02%     -    0s
+     0     0 2541.16667    0    3 2541.62500 2541.16667  0.02%     -    0s
+
+Cutting planes:
+  Gomory: 3
+  Implied bound: 6
+  MIR: 6
+  Flow cover: 1
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 1 nodes (87 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2541.62 2545.37 2554 2757 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.541625000000e+03, best bound 2.541625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Mar 19 05:06:22 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x8f84eb0a
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+03]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 1e+04]
+  NLCon coe range  [1e+00, 4e+03]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 14 nlconstr
+Added 33 variables to disaggregate expressions
+Presolve removed 12 rows and 30 columns
+Presolve time: 0.01s
+Presolved: 241 rows, 219 columns, 597 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 59 continuous, 160 integer (59 binary)
+
+Root relaxation: objective 3.510001e+04, 52 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 35100.0085    0   32          - 35100.0085      -     -    0s
+H    0     0                    42053.250000 35100.1585  16.5%     -    0s
+H    0     0                    38969.000000 35100.1585  9.93%     -    0s
+H    0     0                    38960.750000 35100.1585  9.91%     -    0s
+H    0     0                    38956.625000 35100.1585  9.90%     -    0s
+     0     0     cutoff    0      38956.6250 38956.6250  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 6
+  RLT: 1
+
+Explored 1 nodes (65 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 38956.6 38960.7 38969 42053.2 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.895662500000e+04, best bound 3.895662500000e+04, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:18:09 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0xd24196a9
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 1e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 7 rows and 30 columns
+Presolve time: 0.01s
+Presolved: 280 rows, 235 columns, 690 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 179 integer (59 binary)
+
+Root relaxation: objective 2.219151e+03, 57 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   28          - 2219.15074      -     -    0s
+H    0     0                    4204.0000000 2219.15074  47.2%     -    0s
+H    0     0                    3497.0000000 2219.15074  36.5%     -    0s
+     0     0 2474.59375    0    3 3497.00000 2474.59375  29.2%     -    0s
+H    0     0                    2476.6250000 2474.59375  0.08%     -    0s
+     0     0 2474.59375    0    3 2476.62500 2474.59375  0.08%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Implied bound: 9
+  MIR: 6
+  StrongCG: 1
+  Flow cover: 3
+  Zero half: 1
+  RLT: 7
+  Relax-and-lift: 1
+
+Explored 1 nodes (98 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 3: 2476.62 3497 4204 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:25:14 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x2ea0ec70
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 277 rows, 235 columns, 681 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 179 integer (59 binary)
+
+Root relaxation: objective 2.219151e+03, 51 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   28          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (80 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:27:27 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x2ea0ec70
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 277 rows, 235 columns, 681 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 179 integer (59 binary)
+
+Root relaxation: objective 2.219151e+03, 51 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   28          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (80 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:28:21 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0xb02e8120
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 277 rows, 235 columns, 681 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 179 integer (59 binary)
+
+Root relaxation: objective 2.219151e+03, 56 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   28          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+     0     0 2476.16667    0    3 2489.00000 2476.16667  0.52%     -    0s
+H    0     0                    2476.6250000 2476.16667  0.02%     -    0s
+
+Explored 1 nodes (79 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:28:34 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x463e77d5
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 281 rows, 227 columns, 693 nonzeros
+Presolved model has 51 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 171 integer (55 binary)
+
+Root relaxation: objective 5.879235e+02, 51 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  588.07355  74.2%     -    0s
+H    0     0                     652.6250000  588.07355  9.89%     -    0s
+     0     0  651.29167    0    1  652.62500  651.29167  0.20%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 4
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (66 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 652.625 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:28:54 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x546302b4
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 281 rows, 227 columns, 693 nonzeros
+Presolved model has 51 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 171 integer (55 binary)
+
+Root relaxation: objective 5.879235e+02, 46 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  588.07355  74.2%     -    0s
+H    0     0                     652.6250000  588.07355  9.89%     -    0s
+     0     0  651.29167    0    1  652.62500  651.29167  0.20%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 4
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (61 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 652.625 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 05:29:29 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x3681af10
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 281 rows, 227 columns, 693 nonzeros
+Presolved model has 51 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 171 integer (55 binary)
+
+Root relaxation: objective 5.879235e+02, 46 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  588.07355  74.2%     -    0s
+H    0     0                     652.6250000  588.07355  9.89%     -    0s
+     0     0  651.29167    0    1  652.62500  651.29167  0.20%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 4
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (61 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 652.625 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:00:40 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x2015e31d
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 251 rows, 203 columns, 624 nonzeros
+Presolved model has 45 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 161 integer (46 binary)
+
+Root relaxation: objective 5.879235e+02, 48 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  587.92355  74.2%     -    0s
+H    0     0                     653.8750000  587.92355  10.1%     -    0s
+     0     0  651.29167    0    1  653.87500  651.29167  0.40%     -    0s
+     0     0  652.18056    0    1  653.87500  652.18056  0.26%     -    0s
+H    0     0                     652.6250000  652.18056  0.07%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Implied bound: 5
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (65 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 3: 652.625 653.875 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:15:20 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 36 rows, 122 columns and 100 nonzeros (Min)
+Model fingerprint: 0x09a543b2
+Model has 1 linear objective coefficients
+Model has 24 quadratic constraints
+Model has 6 simple general constraints
+  2 MAX, 4 MIN
+Model has 20 general nonlinear constraints (63 nonlinear terms)
+Variable types: 50 continuous, 72 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 20 nlconstr
+Added 68 variables to disaggregate expressions
+Presolve removed 9 rows and 31 columns
+Presolve time: 0.00s
+Presolved: 333 rows, 278 columns, 816 nonzeros
+Presolved model has 65 SOS constraint(s)
+Presolved model has 17 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 71 continuous, 207 integer (62 binary)
+
+Root relaxation: objective 2.577363e+03, 61 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2577.36317    0   32          - 2577.36317      -     -    0s
+     0     0 2577.40484    0   30          - 2577.40484      -     -    0s
+H    0     0                    5605.7500000 2577.40484  54.0%     -    0s
+H    0     0                    2673.5625000 2577.40484  3.60%     -    0s
+     0     0 infeasible    0      2673.56250 2673.56250  0.00%     -    0s
+
+Cutting planes:
+  Implied bound: 3
+  MIR: 1
+  Flow cover: 1
+  RLT: 5
+
+Explored 1 nodes (105 simplex iterations) in 0.02 seconds (0.01 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 2673.56 5605.75 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.673562500000e+03, best bound 2.673562500000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:16:26 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x68eb5534
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 281 rows, 227 columns, 693 nonzeros
+Presolved model has 51 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 171 integer (55 binary)
+
+Root relaxation: objective 5.879235e+02, 46 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  588.07355  74.2%     -    0s
+H    0     0                     652.6250000  588.07355  9.89%     -    0s
+     0     0  651.29167    0    1  652.62500  651.29167  0.20%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 4
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (61 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 652.625 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:17:47 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x2015e31d
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 6e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 6e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 251 rows, 203 columns, 624 nonzeros
+Presolved model has 45 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 161 integer (46 binary)
+
+Root relaxation: objective 5.879235e+02, 48 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  587.92355    0   35          -  587.92355      -     -    0s
+H    0     0                    2280.1250000  587.92355  74.2%     -    0s
+H    0     0                     653.8750000  587.92355  10.1%     -    0s
+     0     0  651.29167    0    1  653.87500  651.29167  0.40%     -    0s
+     0     0  652.18056    0    1  653.87500  652.18056  0.26%     -    0s
+H    0     0                     652.6250000  652.18056  0.07%     -    0s
+     0     0  652.18056    0    1  652.62500  652.18056  0.07%     -    0s
+
+Cutting planes:
+  Implied bound: 5
+  MIR: 5
+  Flow cover: 2
+  RLT: 8
+  Relax-and-lift: 1
+
+Explored 1 nodes (65 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 3: 652.625 653.875 2280.12 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.526250000000e+02, best bound 6.526250000000e+02, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:19:31 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 30 rows, 103 columns and 87 nonzeros (Min)
+Model fingerprint: 0xd0aa3fd3
+Model has 1 linear objective coefficients
+Model has 22 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 17 general nonlinear constraints (56 nonlinear terms)
+Variable types: 40 continuous, 63 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 17 nlconstr
+Added 63 variables to disaggregate expressions
+Presolve removed 9 rows and 25 columns
+Presolve time: 0.00s
+Presolved: 284 rows, 238 columns, 700 nonzeros
+Presolved model has 50 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 182 integer (48 binary)
+
+Root relaxation: objective 2.532357e+03, 61 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2532.35728    0   23          - 2532.35728      -     -    0s
+H    0     0                    8625.7500000 2532.41978  70.6%     -    0s
+H    0     0                    2673.5625000 2532.41978  5.28%     -    0s
+     0     0 2671.07143    0   19 2673.56250 2671.07143  0.09%     -    0s
+     0     0 2673.21094    0    6 2673.56250 2673.21094  0.01%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Implied bound: 2
+  MIR: 2
+  Flow cover: 1
+  RLT: 4
+  Relax-and-lift: 1
+  BQP: 1
+
+Explored 1 nodes (84 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 2: 2673.56 8625.75 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.673562500000e+03, best bound 2.673562499998e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 06:20:13 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 30 rows, 103 columns and 87 nonzeros (Min)
+Model fingerprint: 0x5273e331
+Model has 1 linear objective coefficients
+Model has 22 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 17 general nonlinear constraints (56 nonlinear terms)
+Variable types: 40 continuous, 63 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 17 nlconstr
+Added 63 variables to disaggregate expressions
+Presolve removed 9 rows and 25 columns
+Presolve time: 0.00s
+Presolved: 284 rows, 238 columns, 700 nonzeros
+Presolved model has 50 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 182 integer (48 binary)
+
+Root relaxation: objective 3.057422e+03, 65 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3057.42188    0    3          - 3057.42188      -     -    0s
+H    0     0                    3077.5625000 3057.42188  0.65%     -    0s
+     0     0 3064.87878    0    8 3077.56250 3064.87878  0.41%     -    0s
+     0     0 infeasible    0      3077.56250 3077.56250  0.00%     -    0s
+
+Explored 1 nodes (95 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 1: 3077.56 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.077562500000e+03, best bound 3.077562499993e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:25:18 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:25:40 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:28:16 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:28:30 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:28:51 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x2bd9a80f
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 50 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (80 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:29:30 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:29:44 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:31:58 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:34:47 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:36:35 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:37:07 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:39:32 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:40:10 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x14c8fce5
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 292 rows, 247 columns, 717 nonzeros
+Presolved model has 65 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 191 integer (62 binary)
+
+Root relaxation: objective 2.219151e+03, 50 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2693.2500000 2219.30074  17.6%     -    0s
+H    0     0                    2489.0000000 2219.30074  10.8%     -    0s
+     0     0 2476.16667    0    3 2489.00000 2476.16667  0.52%     -    0s
+     0     0 2476.16667    0    3 2489.00000 2476.16667  0.52%     -    0s
+H    0     0                    2480.3750000 2476.16667  0.17%     -    0s
+H    0     0                    2476.6250000 2476.16667  0.02%     -    0s
+     0     0 2476.16667    0    3 2476.62500 2476.16667  0.02%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Implied bound: 4
+  MIR: 6
+  Flow cover: 1
+  RLT: 1
+  Relax-and-lift: 2
+
+Explored 1 nodes (84 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2480.38 2489 2693.25 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Fri Mar 27 08:42:11 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0xd66e0617
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Tue Mar 31 07:39:31 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x35cd6f91
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.01s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 49 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (78 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 12:48:43 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x2bd9a80f
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.01s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 50 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (80 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 12:49:09 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0xd50202a2
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 49 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (78 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 12:53:45 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0x35cd6f91
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 49 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (78 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:05:24 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 28 rows, 99 columns and 83 nonzeros (Min)
+Model fingerprint: 0xcfbf973e
+Model has 1 linear objective coefficients
+Model has 21 quadratic constraints
+Model has 2 simple general constraints
+  2 MAX
+Model has 17 general nonlinear constraints (51 nonlinear terms)
+Variable types: 40 continuous, 59 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 12 nlconstr
+Added 39 variables to disaggregate expressions
+Presolve removed 8 rows and 20 columns
+Presolve time: 0.00s
+Presolved: 247 rows, 211 columns, 612 nonzeros
+Presolved model has 53 SOS constraint(s)
+Presolved model has 14 bilinear constraint(s)
+Presolved model has 4 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 42 continuous, 169 integer (50 binary)
+
+Root relaxation: objective 2.219151e+03, 49 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   27          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (79 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:07:00 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 34 rows, 118 columns and 96 nonzeros (Min)
+Model fingerprint: 0x1dbe0f69
+Model has 1 linear objective coefficients
+Model has 23 quadratic constraints
+Model has 5 simple general constraints
+  2 MAX, 3 MIN
+Model has 20 general nonlinear constraints (58 nonlinear terms)
+Variable types: 50 continuous, 68 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 3e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 3e+02]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 15 nlconstr
+Added 44 variables to disaggregate expressions
+Presolve removed 10 rows and 30 columns
+Presolve time: 0.00s
+Presolved: 277 rows, 235 columns, 681 nonzeros
+Presolved model has 59 SOS constraint(s)
+Presolved model has 16 bilinear constraint(s)
+Presolved model has 5 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 56 continuous, 179 integer (59 binary)
+
+Root relaxation: objective 2.219151e+03, 51 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2219.15074    0   28          - 2219.15074      -     -    0s
+H    0     0                    2692.0000000 2219.15074  17.6%     -    0s
+H    0     0                    2490.2500000 2219.15074  10.9%     -    0s
+H    0     0                    2489.0000000 2219.15074  10.8%     -    0s
+H    0     0                    2476.6250000 2219.15074  10.4%     -    0s
+     0     0     cutoff    0      2476.62500 2476.62500  0.00%     -    0s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 3
+  MIR: 1
+  Zero half: 1
+  RLT: 2
+  PSD: 1
+
+Explored 1 nodes (81 simplex iterations) in 0.02 seconds (0.00 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2476.62 2489 2490.25 2692 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.476625000000e+03, best bound 2.476625000000e+03, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:07:50 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 173 rows, 683 columns and 463 nonzeros (Min)
+Model fingerprint: 0x2d81c7b1
+Model has 1 linear objective coefficients
+Model has 129 quadratic constraints
+Model has 64 simple general constraints
+  27 MAX, 29 MIN, 8 AND
+Model has 150 general nonlinear constraints (641 nonlinear terms)
+Variable types: 303 continuous, 380 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [3e+01, 3e+04]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 323 variables to disaggregate expressions
+Presolve added 103 rows and 0 columns
+Presolve removed 0 rows and 130 columns
+Presolve time: 0.02s
+Presolved: 1828 rows, 1502 columns, 4631 nonzeros
+Presolved model has 375 SOS constraint(s)
+Presolved model has 106 bilinear constraint(s)
+Presolved model has 8 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 357 continuous, 1145 integer (361 binary)
+
+Root relaxation: objective 3.829549e+03, 376 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (527 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:08:33 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 173 rows, 683 columns and 463 nonzeros (Min)
+Model fingerprint: 0x72451c40
+Model has 1 linear objective coefficients
+Model has 129 quadratic constraints
+Model has 64 simple general constraints
+  27 MAX, 29 MIN, 8 AND
+Model has 150 general nonlinear constraints (641 nonlinear terms)
+Variable types: 303 continuous, 380 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [5e+01, 3e+04]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 323 variables to disaggregate expressions
+Presolve added 103 rows and 0 columns
+Presolve removed 0 rows and 130 columns
+Presolve time: 0.01s
+Presolved: 1840 rows, 1502 columns, 4655 nonzeros
+Presolved model has 375 SOS constraint(s)
+Presolved model has 112 bilinear constraint(s)
+Presolved model has 8 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 357 continuous, 1145 integer (361 binary)
+
+Root relaxation: objective 1.725853e+03, 350 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (490 simplex iterations) in 0.05 seconds (0.03 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:13:57 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 169 rows, 678 columns and 455 nonzeros (Min)
+Model fingerprint: 0x863d12f5
+Model has 1 linear objective coefficients
+Model has 128 quadratic constraints
+Model has 63 simple general constraints
+  27 MAX, 28 MIN, 8 AND
+Model has 150 general nonlinear constraints (631 nonlinear terms)
+Variable types: 303 continuous, 375 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 8e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [4e+01, 3e+04]
+  NLCon coe range  [1e+00, 8e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 89 nlconstr
+Added 315 variables to disaggregate expressions
+Presolve added 101 rows and 0 columns
+Presolve removed 0 rows and 130 columns
+Presolve time: 0.02s
+Presolved: 1808 rows, 1467 columns, 4577 nonzeros
+Presolved model has 359 SOS constraint(s)
+Presolved model has 109 bilinear constraint(s)
+Presolved model has 8 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 358 continuous, 1109 integer (351 binary)
+
+Root relaxation: objective 2.742510e+02, 257 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  274.25102    0  151          -  274.25102      -     -    0s
+H    0     0                    62848.958333  274.25102   100%     -    0s
+H    0     0                    31988.958333  274.25102  99.1%     -    0s
+     0     0  421.16287    0  236 31988.9583  421.16287  98.7%     -    0s
+H    0     0                    31788.645833  425.41921  98.7%     -    0s
+     0     0  425.41921    0  228 31788.6458  425.41921  98.7%     -    0s
+     0     0  774.95833    0  331 31788.6458  774.95833  97.6%     -    0s
+     0     0  793.22917    0  265 31788.6458  793.22917  97.5%     -    0s
+     0     0  793.22917    0  294 31788.6458  793.22917  97.5%     -    0s
+     0     0  820.86583    0  335 31788.6458  820.86583  97.4%     -    0s
+     0     0 1251.95833    0  324 31788.6458 1251.95833  96.1%     -    0s
+     0     0 1251.95833    0  287 31788.6458 1251.95833  96.1%     -    0s
+     0     0 3032.35208    0  249 31788.6458 3032.35208  90.5%     -    0s
+     0     0 3584.33774    0  271 31788.6458 3584.33774  88.7%     -    0s
+     0     0 4098.69500    0  338 31788.6458 4098.69500  87.1%     -    0s
+     0     0 4098.69500    0  332 31788.6458 4098.69500  87.1%     -    0s
+     0     0 4275.95864    0  350 31788.6458 4275.95864  86.5%     -    0s
+     0     0 4425.16716    0  291 31788.6458 4425.16716  86.1%     -    0s
+     0     0 4490.79616    0  298 31788.6458 4490.79616  85.9%     -    0s
+     0     0 4699.21631    0  334 31788.6458 4699.21631  85.2%     -    0s
+H    0     0                    31370.458333 4699.21631  85.0%     -    0s
+     0     0 4704.62175    0  356 31370.4583 4704.62175  85.0%     -    0s
+     0     0 4915.92699    0  353 31370.4583 4915.92699  84.3%     -    0s
+     0     0 4970.84980    0  350 31370.4583 4970.84980  84.2%     -    0s
+     0     0 5097.23137    0  346 31370.4583 5097.23137  83.8%     -    0s
+H    0     0                    31038.458333 5097.23137  83.6%     -    0s
+     0     0 5265.06011    0  343 31038.4583 5265.06011  83.0%     -    0s
+     0     0 5374.68713    0  337 31038.4583 5374.68713  82.7%     -    0s
+     0     0 5410.90921    0  343 31038.4583 5410.90921  82.6%     -    0s
+     0     0 5583.83511    0  339 31038.4583 5583.83511  82.0%     -    0s
+H    0     0                    31038.020833 5583.83511  82.0%     -    0s
+     0     0 5597.85129    0  269 31038.0208 5597.85129  82.0%     -    0s
+     0     0 5703.54042    0  338 31038.0208 5703.54042  81.6%     -    0s
+     0     0 5734.16145    0  282 31038.0208 5734.16145  81.5%     -    0s
+     0     0 5870.79967    0  317 31038.0208 5870.79967  81.1%     -    0s
+H    0     0                    31037.520833 5870.79967  81.1%     -    0s
+     0     0 5940.21233    0  311 31037.5208 5940.21233  80.9%     -    0s
+     0     0 6211.30401    0  335 31037.5208 6211.30401  80.0%     -    0s
+     0     0 6799.26091    0  274 31037.5208 6799.26091  78.1%     -    0s
+     0     0 7012.01817    0  329 31037.5208 7012.01817  77.4%     -    0s
+     0     0 7099.99817    0  313 31037.5208 7099.99817  77.1%     -    0s
+     0     0 7225.44380    0  368 31037.5208 7225.44380  76.7%     -    0s
+     0     0 7338.38003    0  330 31037.5208 7338.38003  76.4%     -    0s
+     0     0 7453.95279    0  376 31037.5208 7453.95279  76.0%     -    0s
+H    0     0                    29894.520833 7453.95279  75.1%     -    0s
+     0     0 7552.72130    0  325 29894.5208 7552.72130  74.7%     -    0s
+     0     0 7871.70338    0  383 29894.5208 7871.70338  73.7%     -    0s
+     0     0 7977.99318    0  337 29894.5208 7977.99318  73.3%     -    0s
+     0     0 8601.68190    0  344 29894.5208 8601.68190  71.2%     -    0s
+     0     0 8761.79294    0  366 29894.5208 8761.79294  70.7%     -    0s
+     0     0 8974.81585    0  346 29894.5208 8974.81585  70.0%     -    0s
+     0     0 9088.10292    0  335 29894.5208 9088.10292  69.6%     -    1s
+     0     0 9233.21072    0  335 29894.5208 9233.21072  69.1%     -    1s
+     0     0 9302.43724    0  325 29894.5208 9302.43724  68.9%     -    1s
+     0     0 9414.11556    0  274 29894.5208 9414.11556  68.5%     -    1s
+     0     0 9630.32040    0  313 29894.5208 9630.32040  67.8%     -    1s
+     0     0 9773.52477    0  326 29894.5208 9773.52477  67.3%     -    1s
+     0     0 9883.11710    0  316 29894.5208 9883.11710  66.9%     -    1s
+H    0     0                    29804.958333 10496.8406  64.8%     -    1s
+H    0     0                    29789.958333 10496.8406  64.8%     -    1s
+     0     0 10496.8406    0  328 29789.9583 10496.8406  64.8%     -    1s
+H    0     0                    28637.437500 11210.6827  60.9%     -    1s
+     0     0 11210.6827    0  339 28637.4375 11210.6827  60.9%     -    1s
+     0     0 11342.5448    0  298 28637.4375 11342.5448  60.4%     -    1s
+     0     0 11411.0655    0  310 28637.4375 11411.0655  60.2%     -    1s
+     0     0 11428.9811    0  315 28637.4375 11428.9811  60.1%     -    1s
+     0     0 11655.8425    0  312 28637.4375 11655.8425  59.3%     -    1s
+     0     0 12762.4691    0  339 28637.4375 12762.4691  55.4%     -    1s
+H    0     0                    28619.437500 12762.4691  55.4%     -    1s
+     0     0 13312.4687    0  331 28619.4375 13312.4687  53.5%     -    1s
+     0     0 14468.9959    0  310 28619.4375 14468.9959  49.4%     -    1s
+     0     0 15238.9272    0  297 28619.4375 15238.9272  46.8%     -    1s
+     0     0 16174.5329    0  271 28619.4375 16174.5329  43.5%     -    1s
+     0     0 16325.6985    0  318 28619.4375 16325.6985  43.0%     -    1s
+     0     0 16406.3644    0  288 28619.4375 16406.3644  42.7%     -    1s
+     0     0 17347.8605    0  258 28619.4375 17347.8605  39.4%     -    1s
+     0     0 17820.4174    0  270 28619.4375 17820.4174  37.7%     -    1s
+     0     0 18411.9283    0  277 28619.4375 18411.9283  35.7%     -    1s
+     0     0 19053.2910    0  273 28619.4375 19053.2910  33.4%     -    1s
+H    0     0                    28618.500000 19053.2910  33.4%     -    1s
+     0     0 19532.5020    0  306 28618.5000 19532.5020  31.7%     -    1s
+     0     0 22440.3732    0  311 28618.5000 22440.3732  21.6%     -    1s
+H    0     0                    26490.500000 22440.3732  15.3%     -    1s
+     0     0 23270.5438    0  296 26490.5000 23270.5438  12.2%     -    1s
+     0     0 24451.7687    0  262 26490.5000 24451.7687  7.70%     -    1s
+     0     0 25173.9002    0  337 26490.5000 25173.9002  4.97%     -    1s
+     0     0 25173.9002    0  308 26490.5000 25173.9002  4.97%     -    1s
+     0     0 25295.7464    0  348 26490.5000 25295.7464  4.51%     -    1s
+     0     0 25354.7732    0  334 26490.5000 25354.7732  4.29%     -    1s
+     0     0 25354.7732    0  342 26490.5000 25354.7732  4.29%     -    1s
+     0     0 25354.7732    0  359 26490.5000 25354.7732  4.29%     -    1s
+     0     0 25599.7333    0  300 26490.5000 25599.7333  3.36%     -    1s
+     0     0 25599.7333    0  151 26490.5000 25599.7333  3.36%     -    1s
+     0     2 25599.7333    0  145 26490.5000 25599.7333  3.36%     -    1s
+H  106   105                    26490.062500 25599.7333  3.36%   122    2s
+H  115   105                    26490.000000 25599.7333  3.36%   118    2s
+H  545   247                    26489.562500 25599.7333  3.36%  62.0    2s
+H  608   304                    26035.645833 25599.7333  1.67%  58.0    2s
+H  741   304                    25708.458333 25599.7333  0.42%  53.9    2s
+H  864   303                    25708.270833 25599.7333  0.42%  51.2    2s
+H  946   303                    25708.145833 25599.7333  0.42%  50.2    2s
+*  955   303              34    25624.020833 25599.7333  0.09%  50.2    2s
+*  978   303              23    25623.583333 25599.7333  0.09%  49.4    2s
+H  991   303                    25609.708333 25599.7333  0.04%  49.1    2s
+* 1285   276              24    25609.333333 25599.7333  0.04%  43.5    2s
+
+Cutting planes:
+  Learned: 25
+  Gomory: 18
+  Cover: 16
+  Implied bound: 493
+  Clique: 22
+  MIR: 413
+  StrongCG: 64
+  Flow cover: 102
+  Zero half: 5
+  Mod-K: 1
+  Network: 2
+  RLT: 302
+  Relax-and-lift: 130
+  BQP: 17
+
+Explored 5174 nodes (122316 simplex iterations) in 2.91 seconds (1.49 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 25609.3 25609.7 25623.6 ... 26490
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.560933333333e+04, best bound 2.560933333333e+04, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  2 13:16:41 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 173 rows, 683 columns and 463 nonzeros (Min)
+Model fingerprint: 0x6167ce71
+Model has 1 linear objective coefficients
+Model has 129 quadratic constraints
+Model has 64 simple general constraints
+  27 MAX, 29 MIN, 8 AND
+Model has 150 general nonlinear constraints (641 nonlinear terms)
+Variable types: 303 continuous, 380 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+06]
+  RHS range        [1e+00, 4e+00]
+  QRHS range       [5e+01, 4e+05]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 90 nlconstr
+Added 323 variables to disaggregate expressions
+Presolve added 103 rows and 0 columns
+Presolve removed 0 rows and 130 columns
+Presolve time: 0.02s
+Presolved: 1840 rows, 1502 columns, 4655 nonzeros
+Presolved model has 375 SOS constraint(s)
+Presolved model has 112 bilinear constraint(s)
+Presolved model has 8 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 357 continuous, 1145 integer (361 binary)
+
+Root relaxation: objective 1.725853e+03, 285 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 1725.85317    0  168          - 1725.85317      -     -    0s
+     0     0 1725.85317    0  184          - 1725.85317      -     -    0s
+     0     0 3252.86128    0  291          - 3252.86128      -     -    0s
+H    0     0                    7238641.6458 3266.80648   100%     -    0s
+     0     0 3266.80648    0  352 7238641.65 3266.80648   100%     -    0s
+H    0     0                    2588281.9375 3432.05676   100%     -    0s
+     0     0 3432.05676    0  345 2588281.94 3432.05676   100%     -    0s
+     0     0 3578.01361    0  342 2588281.94 3578.01361   100%     -    0s
+     0     0 4493.85760    0  315 2588281.94 4493.85760   100%     -    0s
+     0     0 4622.45377    0  341 2588281.94 4622.45377   100%     -    0s
+     0     0 4709.96539    0  315 2588281.94 4709.96539   100%     -    0s
+H    0     0                    1897269.3958 4719.95541   100%     -    0s
+H    0     0                    1893699.3958 4719.95541   100%     -    0s
+     0     0 5134.58700    0  327 1893699.40 5134.58700   100%     -    0s
+     0     0 5237.10495    0  335 1893699.40 5237.10495   100%     -    0s
+H    0     0                    1477074.3333 5237.10495   100%     -    0s
+     0     0 11101.7288    0  319 1477074.33 11101.7288  99.2%     -    0s
+     0     0 12311.5564    0  346 1477074.33 12311.5564  99.2%     -    0s
+H    0     0                    1416528.2500 12312.9884  99.1%     -    0s
+H    0     0                    1415373.2500 12312.9884  99.1%     -    0s
+     0     0 12315.3875    0  348 1415373.25 12315.3875  99.1%     -    0s
+     0     0 12320.1793    0  361 1415373.25 12320.1793  99.1%     -    0s
+     0     0 12324.9387    0  365 1415373.25 12324.9387  99.1%     -    0s
+     0     0 12326.8325    0  364 1415373.25 12326.8325  99.1%     -    0s
+     0     0 17696.9972    0  360 1415373.25 17696.9972  98.7%     -    0s
+     0     0 17696.9972    0  360 1415373.25 17696.9972  98.7%     -    0s
+     0     0 17696.9972    0  311 1415373.25 17696.9972  98.7%     -    0s
+     0     2 17696.9972    0  303 1415373.25 17696.9972  98.7%     -    0s
+H   81   158                    1373653.2500 160635.964  88.3%   120    0s
+H   92   158                    1332793.2500 160635.964  87.9%   121    0s
+H  539   448                    1146374.2500 199811.770  82.6%  58.9    0s
+* 1000   672              26    772863.52083 389615.036  49.6%  48.5    0s
+H 1269   643                    679931.52083 389615.036  42.7%  43.3    0s
+H 1377   643                    647541.52083 389615.036  39.8%  42.4    0s
+H 1449   445                    646881.52083 397531.927  38.5%  41.5    1s
+H 1637   445                    646881.14583 447416.431  30.8%  37.9    1s
+* 2390   561              33    644085.39583 592144.230  8.06%  28.4    1s
+* 2391   561              33    644085.14583 592144.230  8.06%  28.4    1s
+* 2394   561              33    644084.89583 592144.230  8.06%  28.3    1s
+* 2836   701              38    643765.20833 592144.230  8.02%  25.5    1s
+* 2839   701              38    643764.95833 592144.230  8.02%  25.4    1s
+* 2940   701              37    639622.58333 637135.001  0.39%  25.0    1s
+* 2941   701              37    639622.33333 637135.001  0.39%  25.0    1s
+* 3001   701              36    639562.52083 637135.001  0.38%  24.8    1s
+* 3002   701              36    639562.27083 637135.001  0.38%  24.7    1s
+* 3009   701              36    639562.02083 637135.001  0.38%  24.7    1s
+* 3142   701              38    639242.89583 637135.001  0.33%  23.9    1s
+* 3143   701              38    639242.64583 637135.001  0.33%  23.9    1s
+* 3146   701              38    639242.39583 637135.001  0.33%  23.9    1s
+* 3337   701              34    639132.14583 637135.001  0.31%  23.0    1s
+* 3338   701              34    639131.89583 637135.001  0.31%  23.0    1s
+* 3341   701              33    639131.64583 637135.001  0.31%  22.9    1s
+* 3391   793              39    638871.14583 637135.001  0.27%  22.7    1s
+* 3392   793              39    638870.89583 637135.001  0.27%  22.7    1s
+* 3395   793              38    638870.64583 637135.001  0.27%  22.7    1s
+* 3408   793              33    638805.27083 637135.001  0.26%  22.6    1s
+* 3411   793              33    638805.02083 637135.001  0.26%  22.6    1s
+* 5059    34              41    638804.89583 637135.001  0.26%  17.3    1s
+
+Cutting planes:
+  Learned: 15
+  Gomory: 23
+  Cover: 1
+  Implied bound: 351
+  Clique: 17
+  MIR: 176
+  StrongCG: 34
+  Flow cover: 31
+  Zero half: 2
+  Mod-K: 2
+  RLT: 177
+  Relax-and-lift: 96
+  BQP: 1
+
+Explored 5509 nodes (96960 simplex iterations) in 1.91 seconds (1.01 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 638805 638805 638805 ... 639242
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.388048958333e+05, best bound 6.388048958333e+05, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:34:46 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 163 rows, 644 columns and 441 nonzeros (Min)
+Model fingerprint: 0xb7610eac
+Model has 1 linear objective coefficients
+Model has 126 quadratic constraints
+Model has 61 simple general constraints
+  27 MAX, 26 MIN, 8 AND
+Model has 148 general nonlinear constraints (619 nonlinear terms)
+Variable types: 282 continuous, 362 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+03]
+  RHS range        [1e+00, 8e+03]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 87 nlconstr
+Added 303 variables to disaggregate expressions
+Presolve added 105 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.02s
+Presolved: 1669 rows, 1366 columns, 4230 nonzeros
+Presolved model has 321 SOS constraint(s)
+Presolved model has 96 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 336 continuous, 1030 integer (322 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.02 seconds (0.01 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:35:05 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 163 rows, 644 columns and 441 nonzeros (Min)
+Model fingerprint: 0x051af147
+Model has 1 linear objective coefficients
+Model has 126 quadratic constraints
+Model has 61 simple general constraints
+  27 MAX, 26 MIN, 8 AND
+Model has 148 general nonlinear constraints (619 nonlinear terms)
+Variable types: 282 continuous, 362 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 8e+04]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 87 nlconstr
+Added 303 variables to disaggregate expressions
+Presolve added 105 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.01s
+Presolved: 1669 rows, 1366 columns, 4230 nonzeros
+Presolved model has 321 SOS constraint(s)
+Presolved model has 96 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 336 continuous, 1030 integer (322 binary)
+
+Explored 1 nodes (0 simplex iterations) in 0.03 seconds (0.01 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:35:18 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 163 rows, 644 columns and 441 nonzeros (Min)
+Model fingerprint: 0xaeae37fd
+Model has 1 linear objective coefficients
+Model has 126 quadratic constraints
+Model has 61 simple general constraints
+  27 MAX, 26 MIN, 8 AND
+Model has 148 general nonlinear constraints (619 nonlinear terms)
+Variable types: 282 continuous, 362 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 8e+04]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 87 nlconstr
+Added 303 variables to disaggregate expressions
+Presolve added 105 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.02s
+Presolved: 1669 rows, 1366 columns, 4230 nonzeros
+Presolved model has 321 SOS constraint(s)
+Presolved model has 96 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 336 continuous, 1030 integer (322 binary)
+
+Root relaxation: objective 3.830216e+03, 372 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 infeasible    0               - infeasible      -     -    0s
+
+Explored 1 nodes (482 simplex iterations) in 0.05 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:36:07 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 159 rows, 639 columns and 433 nonzeros (Min)
+Model fingerprint: 0xb2a6bddf
+Model has 1 linear objective coefficients
+Model has 125 quadratic constraints
+Model has 60 simple general constraints
+  27 MAX, 25 MIN, 8 AND
+Model has 148 general nonlinear constraints (609 nonlinear terms)
+Variable types: 282 continuous, 357 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 8e+01]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 8e+04]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 8e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 86 nlconstr
+Added 295 variables to disaggregate expressions
+Presolve added 103 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.02s
+Presolved: 1641 rows, 1331 columns, 4160 nonzeros
+Presolved model has 305 SOS constraint(s)
+Presolved model has 95 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 337 continuous, 994 integer (312 binary)
+
+Root relaxation: objective 3.949818e+02, 239 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  394.98178    0  125          -  394.98178      -     -    0s
+H    0     0                    218276.43750  394.98178   100%     -    0s
+H    0     0                    218276.25000  394.98178   100%     -    0s
+     0     0  699.97970    0  257 218276.250  699.97970   100%     -    0s
+     0     0  699.97970    0  253 218276.250  699.97970   100%     -    0s
+H    0     0                    57268.437500  720.62250  98.7%     -    0s
+     0     0  858.42200    0  260 57268.4375  858.42200  98.5%     -    0s
+H    0     0                    57267.937500  858.42200  98.5%     -    0s
+     0     0  859.11212    0  258 57267.9375  859.11212  98.5%     -    0s
+H    0     0                    57267.687500  859.11212  98.5%     -    0s
+     0     0 2344.52524    0  249 57267.6875 2344.52524  95.9%     -    0s
+     0     0 2880.60823    0  191 57267.6875 2880.60823  95.0%     -    0s
+     0     0 4054.39526    0  204 57267.6875 4054.39526  92.9%     -    0s
+H    0     0                    56838.625000 4054.39526  92.9%     -    0s
+H    0     0                    56480.625000 4054.39526  92.8%     -    0s
+     0     0 5387.48235    0  172 56480.6250 5387.48235  90.5%     -    0s
+H    0     0                    48966.937500 5387.48235  89.0%     -    0s
+     0     0 6298.70924    0  195 48966.9375 6298.70924  87.1%     -    0s
+     0     0 6749.91399    0  146 48966.9375 6749.91399  86.2%     -    0s
+H    0     0                    48676.937500 6749.91399  86.1%     -    0s
+H    0     0                    43846.937500 6749.91399  84.6%     -    0s
+     0     0 7050.33789    0  254 43846.9375 7050.33789  83.9%     -    0s
+     0     0 8601.93236    0  242 43846.9375 8601.93236  80.4%     -    0s
+     0     0 8962.73815    0  167 43846.9375 8962.73815  79.6%     -    0s
+     0     0 9526.48092    0  196 43846.9375 9526.48092  78.3%     -    0s
+     0     0 10382.0733    0  243 43846.9375 10382.0733  76.3%     -    0s
+     0     0 10410.7345    0  212 43846.9375 10410.7345  76.3%     -    0s
+     0     0 12259.6252    0  245 43846.9375 12259.6252  72.0%     -    0s
+     0     0 12382.9420    0  231 43846.9375 12382.9420  71.8%     -    0s
+     0     0 14731.9879    0  241 43846.9375 14731.9879  66.4%     -    0s
+H    0     0                    40654.937500 14731.9879  63.8%     -    0s
+     0     0 16247.6626    0  220 40654.9375 16247.6626  60.0%     -    0s
+H    0     0                    39773.812500 16247.6626  59.1%     -    0s
+     0     0 22797.7819    0  235 39773.8125 22797.7819  42.7%     -    0s
+H    0     0                    39453.437500 22797.7819  42.2%     -    0s
+     0     0 34330.6464    0  233 39453.4375 34330.6464  13.0%     -    0s
+H    0     0                    36642.625000 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  215 36642.6250 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  134 36642.6250 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  250 36642.6250 36241.5625  1.09%     -    0s
+H    0     0                    36642.437500 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  188 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  220 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  177 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  239 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0   37 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0   90 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0  184 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.5625    0   67 36642.4375 36241.5625  1.09%     -    0s
+     0     0 36241.6111    0   70 36642.4375 36241.6111  1.09%     -    0s
+     0     0 36241.6111    0   70 36642.4375 36241.6111  1.09%     -    0s
+     0     2 36241.6111    0   70 36642.4375 36241.6111  1.09%     -    0s
+H  100   112                    36494.437500 36241.6111  0.69%   102    0s
+H  105   112                    36384.312500 36241.6111  0.39%  98.2    0s
+H  661   215                    36383.437500 36241.6111  0.39%  46.5    1s
+H  794   215                    36323.812500 36241.6111  0.23%  42.6    1s
+H  889   215                    36323.562500 36241.6111  0.23%  40.9    1s
+* 1659   366              26    36323.375000 36241.6111  0.23%  35.4    1s
+* 1662   366              26    36323.125000 36241.6111  0.22%  35.4    1s
+* 1681   366              34    36322.625000 36241.6111  0.22%  35.0    1s
+H 2156   505                    36322.562500 36241.6111  0.22%  33.7    1s
+H 2179   505                    36321.812500 36241.6111  0.22%  33.6    1s
+H 2408   505                    36321.687500 36241.6111  0.22%  33.2    1s
+* 2647   498              26    36321.625000 36241.6111  0.22%  32.5    1s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 8
+  Cover: 5
+  Implied bound: 53
+  Clique: 3
+  MIR: 33
+  Mixing: 1
+  StrongCG: 2
+  Flow cover: 39
+  Mod-K: 1
+  RLT: 40
+  Relax-and-lift: 27
+
+Explored 8782 nodes (238514 simplex iterations) in 2.89 seconds (1.51 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 36321.6 36321.7 36321.8 ... 36383.4
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.632162500000e+04, best bound 3.632162500000e+04, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:36:52 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 20 rows, 157 columns and 51 nonzeros (Min)
+Model fingerprint: 0x3c996d96
+Model has 1 linear objective coefficients
+Model has 7 quadratic constraints
+Model has 3 simple general constraints
+  2 MAX, 1 MIN
+Model has 60 general nonlinear constraints (270 nonlinear terms)
+Variable types: 83 continuous, 74 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 4e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+04]
+  RHS range        [1e+00, 6e+01]
+  QRHS range       [4e+02, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 8 nlconstr
+Added 15 variables to disaggregate expressions
+Presolve removed 3 rows and 71 columns
+Presolve time: 0.00s
+Presolved: 271 rows, 264 columns, 699 nonzeros
+Presolved model has 100 SOS constraint(s)
+Presolved model has 13 bilinear constraint(s)
+Presolved model has 1 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 21 continuous, 243 integer (61 binary)
+
+Root relaxation: objective 2.766746e+04, 44 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 27667.4580    0   18          - 27667.4580      -     -    0s
+     0     0 27667.4634    0   17          - 27667.4634      -     -    0s
+H    0     0                    2340801.0625 27667.4634  98.8%     -    0s
+H    0     0                    2340053.0625 27667.4634  98.8%     -    0s
+     0     0 35476.0042    0   33 2340053.06 35476.0042  98.5%     -    0s
+     0     0 35476.0775    0   39 2340053.06 35476.0775  98.5%     -    0s
+     0     0 35771.8342    0   36 2340053.06 35771.8342  98.5%     -    0s
+     0     0 45044.7876    0   35 2340053.06 45044.7876  98.1%     -    0s
+H    0     0                    2024254.0000 45961.0542  97.7%     -    0s
+     0     0 52078.6739    0   35 2024254.00 52078.6739  97.4%     -    0s
+     0     0 68329.2160    0   37 2024254.00 68329.2160  96.6%     -    0s
+     0     0 86984.5984    0   37 2024254.00 86984.5984  95.7%     -    0s
+     0     0 90122.5857    0   35 2024254.00 90122.5857  95.5%     -    0s
+     0     0 90469.7329    0   35 2024254.00 90469.7329  95.5%     -    0s
+     0     0 90970.2053    0   34 2024254.00 90970.2053  95.5%     -    0s
+     0     0 91193.3663    0   34 2024254.00 91193.3663  95.5%     -    0s
+     0     0 91763.9330    0   34 2024254.00 91763.9330  95.5%     -    0s
+H    0     0                    2023023.5000 91763.9330  95.5%     -    0s
+     0     0 91792.2198    0   34 2023023.50 91792.2198  95.5%     -    0s
+     0     0 91912.8011    0   32 2023023.50 91912.8011  95.5%     -    0s
+     0     0 91912.8376    0   32 2023023.50 91912.8376  95.5%     -    0s
+
+Cutting planes:
+  Implied bound: 4
+  MIR: 10
+  RLT: 10
+
+Explored 1 nodes (261 simplex iterations) in 0.06 seconds (0.02 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 4: 2.02302e+06 2.02425e+06 2.34005e+06 2.3408e+06 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.023023500000e+06, best bound 2.023023500000e+06, gap 0.0000%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:38:16 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 163 rows, 644 columns and 441 nonzeros (Min)
+Model fingerprint: 0x507c7f66
+Model has 1 linear objective coefficients
+Model has 126 quadratic constraints
+Model has 61 simple general constraints
+  27 MAX, 26 MIN, 8 AND
+Model has 148 general nonlinear constraints (619 nonlinear terms)
+Variable types: 282 continuous, 362 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+05]
+  RHS range        [1e+00, 8e+05]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 87 nlconstr
+Added 303 variables to disaggregate expressions
+Presolve added 105 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.02s
+Presolved: 1669 rows, 1366 columns, 4230 nonzeros
+Presolved model has 321 SOS constraint(s)
+Presolved model has 96 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 336 continuous, 1030 integer (322 binary)
+
+Root relaxation: objective 3.845152e+03, 293 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3845.15183    0  166          - 3845.15183      -     -    0s
+     0     0 3847.92638    0  167          - 3847.92638      -     -    0s
+H    0     0                    1782477.8750 3847.92638   100%     -    0s
+     0     0 8004.88234    0  217 1782477.87 8004.88234   100%     -    0s
+     0     0 8008.37978    0  211 1782477.87 8008.37978   100%     -    0s
+     0     0 8272.92341    0  282 1782477.87 8272.92341   100%     -    0s
+H    0     0                    1782174.8750 8344.80467   100%     -    0s
+     0     0 8714.69092    0  283 1782174.87 8714.69092   100%     -    0s
+     0     0 9635.70769    0  288 1782174.87 9635.70769  99.5%     -    0s
+H    0     0                    1768363.8750 9643.83424  99.5%     -    0s
+     0     0 10689.8539    0  299 1768363.87 10689.8539  99.4%     -    0s
+H    0     0                    1159259.3750 10689.8539  99.1%     -    0s
+H    0     0                    1156543.4375 10689.8539  99.1%     -    0s
+     0     0 11229.4654    0  303 1156543.44 11229.4654  99.0%     -    0s
+H    0     0                    1156448.4375 11229.4654  99.0%     -    0s
+     0     0 11230.0258    0  300 1156448.44 11230.0258  99.0%     -    0s
+     0     0 11422.5313    0  274 1156448.44 11422.5313  99.0%     -    0s
+     0     0 11431.3003    0  278 1156448.44 11431.3003  99.0%     -    0s
+     0     0 11511.1713    0  277 1156448.44 11511.1713  99.0%     -    0s
+H    0     0                    1153978.4375 11511.2117  99.0%     -    0s
+     0     0 21449.3659    0  306 1153978.44 21449.3659  98.1%     -    0s
+     0     0 23545.2478    0  275 1153978.44 23545.2478  98.0%     -    0s
+H    0     0                    1153977.5000 23588.3789  98.0%     -    0s
+     0     0 23601.6617    0  306 1153977.50 23601.6617  98.0%     -    0s
+     0     0 23703.4042    0  286 1153977.50 23703.4042  97.9%     -    0s
+     0     0 23704.1222    0  307 1153977.50 23704.1222  97.9%     -    0s
+     0     0 23737.9341    0  277 1153977.50 23737.9341  97.9%     -    0s
+H    0     0                    1006268.4375 23737.9341  97.6%     -    0s
+     0     0 26500.7338    0  312 1006268.44 26500.7338  97.4%     -    0s
+     0     0 26500.7338    0  275 1006268.44 26500.7338  97.4%     -    0s
+     0     2 26578.3085    0  275 1006268.44 26578.3085  97.4%     -    0s
+H   61    44                    1003408.4375 546390.733  45.5%   127    0s
+H   63    44                    977363.43750 546390.733  44.1%   125    0s
+H  204   165                    974503.43750 938909.540  3.65%  71.8    0s
+H  209   165                    941413.81250 938909.540  0.27%  70.2    0s
+H  438    42                    940643.62500 939077.555  0.17%  44.6    0s
+
+Cutting planes:
+  Learned: 11
+  Gomory: 48
+  Cover: 4
+  Implied bound: 288
+  Clique: 18
+  MIR: 161
+  StrongCG: 11
+  Flow cover: 31
+  Zero half: 5
+  Mod-K: 2
+  RLT: 139
+  Relax-and-lift: 86
+  BQP: 2
+  PSD: 9
+
+Explored 587 nodes (23599 simplex iterations) in 0.79 seconds (0.38 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 940644 941414 974503 ... 1.15654e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.406436250000e+05, best bound 9.406173620852e+05, gap 0.0028%
+
+Gurobi 13.0.0 (linux64) logging started Thu Apr  9 16:44:01 2026
+
+Set parameter LogFile to value "gurobi.log"
+Set parameter OutputFlag to value 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 128 logical processors, using up to 32 threads
+
+Non-default parameters:
+TimeLimit  169200
+InfUnbdInfo  1
+LogToConsole  0
+NonConvex  2
+
+Optimize a model with 163 rows, 644 columns and 441 nonzeros (Min)
+Model fingerprint: 0x969ae892
+Model has 1 linear objective coefficients
+Model has 126 quadratic constraints
+Model has 61 simple general constraints
+  27 MAX, 26 MIN, 8 AND
+Model has 148 general nonlinear constraints (619 nonlinear terms)
+Variable types: 282 continuous, 362 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  QMatrix range    [1e+00, 2e+02]
+  QLMatrix range   [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+06]
+  RHS range        [1e+00, 1e+06]
+  QRHS range       [3e+01, 1e+03]
+  NLCon coe range  [1e+00, 2e+01]
+Warning: 0 <= x < 1e-10 in domain of division.
+         Setting lower bound to 1e-10.
+Presolve model has 87 nlconstr
+Added 303 variables to disaggregate expressions
+Presolve added 105 rows and 0 columns
+Presolve removed 0 rows and 108 columns
+Presolve time: 0.02s
+Presolved: 1669 rows, 1366 columns, 4230 nonzeros
+Presolved model has 321 SOS constraint(s)
+Presolved model has 96 bilinear constraint(s)
+Presolved model has 7 nonlinear constraint(s)
+
+Solving non-convex MINLP to global optimality
+
+Variable types: 336 continuous, 1030 integer (322 binary)
+
+Root relaxation: objective 3.845152e+03, 309 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3845.15183    0  156          - 3845.15183      -     -    0s
+     0     0 3847.92638    0  157          - 3847.92638      -     -    0s
+     0     0 7995.70199    0  252          - 7995.70199      -     -    0s
+H    0     0                    1.409976e+07 8087.10237   100%     -    0s
+     0     0 8087.10237    0  264 1.4100e+07 8087.10237   100%     -    0s
+     0     0 9671.83582    0  265 1.4100e+07 9671.83582   100%     -    0s
+H    0     0                    1.409686e+07 9725.01136   100%     -    0s
+     0     0 10426.9842    0  281 1.4097e+07 10426.9842   100%     -    0s
+     0     0 10862.3447    0  261 1.4097e+07 10862.3447   100%     -    0s
+H    0     0                    7684374.3125 10870.6201   100%     -    0s
+H    0     0                    2519358.1875 10870.6201   100%     -    0s
+     0     0 10870.6201    0  268 2519358.19 10870.6201   100%     -    0s
+     0     0 11134.9336    0  255 2519358.19 11134.9336   100%     -    0s
+H    0     0                    2517457.1875 11136.2206   100%     -    0s
+     0     0 11136.2206    0  274 2517457.19 11136.2206   100%     -    0s
+     0     0 11334.4733    0  260 2517457.19 11334.4733   100%     -    0s
+H    0     0                    1046162.8125 11334.5214  98.9%     -    0s
+     0     0 11425.3996    0  269 1046162.81 11425.3996  98.9%     -    0s
+     0     0 30742.4227    0  288 1046162.81 30742.4227  97.1%     -    0s
+H    0     0                    1028248.8125 30742.4227  97.0%     -    0s
+     0     0 33967.3920    0  287 1028248.81 33967.3920  96.7%     -    0s
+     0     0 34849.5607    0  240 1028248.81 34849.5607  96.6%     -    0s
+     0     0 34871.1584    0  255 1028248.81 34871.1584  96.6%     -    0s
+     0     0 34992.2166    0  252 1028248.81 34992.2166  96.6%     -    0s
+H    0     0                    1027808.3125 34993.4042  96.6%     -    0s
+     0     0 34993.4042    0  255 1027808.31 34993.4042  96.6%     -    0s
+     0     0 35010.0707    0  230 1027808.31 35010.0707  96.6%     -    0s
+     0     0 39753.6943    0  243 1027808.31 39753.6943  96.1%     -    0s
+     0     0 39753.6943    0  243 1027808.31 39753.6943  96.1%     -    0s
+     0     0 39753.6943    0  243 1027808.31 39753.6943  96.1%     -    0s
+     0     2 39754.1350    0  226 1027808.31 39754.1350  96.1%     -    0s
+H   82   118                    978593.00000 938555.619  4.09%  93.2    0s
+H  110   118                    969964.81250 938555.619  3.24%  82.1    0s
+H  166   118                    969551.62500 938555.619  3.20%  66.4    0s
+H  351   134                    941414.68750 939478.363  0.21%  45.7    0s
+H  365   134                    941413.87500 939478.363  0.21%  45.3    0s
+H  384   134                    941413.81250 939478.363  0.21%  44.0    0s
+H  491    44                    940643.62500 939478.363  0.12%  39.3    0s
+
+Cutting planes:
+  Learned: 11
+  Gomory: 10
+  Cover: 1
+  Implied bound: 278
+  Clique: 15
+  MIR: 137
+  StrongCG: 11
+  Flow cover: 35
+  Zero half: 7
+  Mod-K: 2
+  Network: 1
+  RLT: 107
+  Relax-and-lift: 84
+  BQP: 2
+  PSD: 3
+
+Explored 675 nodes (23594 simplex iterations) in 0.83 seconds (0.38 work units)
+Thread count was 32 (of 128 available processors)
+
+Solution count 10: 940644 941414 941414 ... 1.04616e+06
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.406436250000e+05, best bound 9.406179080290e+05, gap 0.0027%

@@ -6,7 +6,6 @@ void kernel_3mm(float E[180][190],float A[180][200],float B[200][190],float F[19
   int i;
   int j;
   int k;
-{
     
     
     
@@ -52,5 +51,4 @@ void kernel_3mm(float E[180][190],float A[180][200],float B[200][190],float F[19
         }
       }
     }
-  }
 }

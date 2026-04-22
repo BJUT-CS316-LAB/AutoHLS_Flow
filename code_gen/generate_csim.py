@@ -275,7 +275,14 @@ class CSIM:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt.split("_")[0]]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt.split("_")[0]]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         res = ltc[0]
                         for i, o in enumerate(op):
@@ -301,7 +308,14 @@ class CSIM:
                             t = [t]
                         ltc = []
                         for tt in t:
-                            tc = self.info_log[tt]
+                            if tt.isnumeric():
+                                tc = int(tt)
+                            else:
+                                tc = self.info_log[tt]
+                            try:
+                                tc = int(tc)
+                            except:
+                                pass
                             ltc.append(tc)
                         
                         res = ltc[0]
