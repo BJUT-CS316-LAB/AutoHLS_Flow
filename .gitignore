@@ -5,3 +5,6 @@ prometheus/
 __pycache__/
 *.pyc
 code_gen/__pycache__/
+onnx_files/
+dummy_deit.onnx
+
