@@ -18,5 +18,6 @@ class code_gen:
             code_generation_dataflow.CodeGeneration(nlp_file,nlp_log, output, analysis)
         post_pass.GeneratePostPass(update_shape, output, nlp_file, nlp_log)
 
-        generate_csim.CSIM(cfile, output, host_name, analysis, schedule, nlp_file, nlp_log)
+        if cfile is not None:
+            generate_csim.CSIM(cfile, output, host_name, analysis, schedule, nlp_file, nlp_log)
         split_per_slr.SplitPerSLR(output, nlp_file, nlp_log, nb_slr)

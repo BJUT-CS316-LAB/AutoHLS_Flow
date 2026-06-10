@@ -8,7 +8,6 @@ void gpt2_forward(float params_wte[50257][1024], float params_wpe[64][1024], flo
     int o;
 
 
-
     // begin of layers loop
 
     for ( b = 0; b < 4; b++) {

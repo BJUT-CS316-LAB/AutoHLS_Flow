@@ -104,22 +104,12 @@ class memoryBound:
         # # RAR
         # # FIXME need to check the polyhedron to be sure it is a RAR
         read = {}
-        read = {0: []}
-        scop = pocc.scop(self.folder, self.file)
-        id_statement = 0
-        for k,line in enumerate(scop):
-            if "# Read access informations" in line:
-                k1 = k
-                while "# Write access informations" not in line:
-                    stat = ""
-                    if "##" in line:
-                        stat = line.split("##")[1].replace("\n", "").replace("\n", "").split("[")[0]
-                    if stat != "":
-                        read[id_statement].append(stat)
-                    k1+=1
-                    line = scop[k1]
-                id_statement += 1
-                read[id_statement] = []
+        for id_statement in range(len(self.schedule)):
+            read[id_statement] = []
+            for r in self.analysis.dic[id_statement]["read"]:
+                stat = r.split("[")[0]
+                if stat != "":
+                    read[id_statement].append(stat)
         
         for sched1 in range(len(self.schedule)):
             for sched2 in range(len(self.schedule)):
@@ -168,11 +158,15 @@ class memoryBound:
 
 
     def compute_inter_task_dependance(self):
+        import os
         # init
         for k1 in range(len(self.statements)):
             self.inter_task_dependance[k1] = {}
             for k2 in range(len(self.statements)):
                 self.inter_task_dependance[k1][k2] = False
+
+        if not os.path.exists(self.file):
+            return
 
         res = pocc.candl(self.folder, self.file)
         for line in res:

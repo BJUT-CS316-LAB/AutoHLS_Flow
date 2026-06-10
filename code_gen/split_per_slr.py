@@ -713,7 +713,10 @@ class SplitPerSLR:
 
 
     def update_host(self):
+        import os
         name_host = "/".join(self.cfile.split("/")[0:-1]) + "/host.cpp"
+        if not os.path.exists(name_host):
+            return
         f = open(name_host, "r")
         lines = f.readlines()
         f.close()

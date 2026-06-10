@@ -48,6 +48,7 @@ if __name__ == "__main__":
     parser.add_argument("--code_generation", action="store_true", help="Remove the cyclic buffer optimization. Default=False")
     parser.add_argument("--output", type=str, help="Name of the output file")
     parser.add_argument("--SLR", type=int, default=0, help="Number of SLR. Default is 3")
+    parser.add_argument("--onnx_file", type=str, help="ONNX file to parse instead of C file")
     parser.add_argument("--factor", type=float, default=0, help="factor. Default is 1")
     parser.add_argument("--partitioning_max", type=int, default=0, help="Number of SLR. Default is 3")
     parser.add_argument("--MAX_BUFFER_SIZE", type=int, default=0, help="Number of SLR. Default is 3")
@@ -84,28 +85,80 @@ if __name__ == "__main__":
     nlp_file = f"{args.folder}/nlp.mod"
     nlp_log = f"{args.folder}/nlp.log"
 
-    # schedule, dic, operations, arrays_size, dep, operation_list = extract.compute_statement(args.file)
-    # iscc_ = iscc.ISCC(args.no_distribution, args.folder, schedule, dic, operations, arrays_size, dep, operation_list)
-
+    if args.onnx_file:
+        import onnx_frontend
+        nodes = onnx_frontend.parse_onnx_to_prometheus(args.onnx_file)
         
-    if not args.no_distribution:
-        schedule, dic, operations, arrays_size, dep, operation_list = extract.compute_statement(args.folder, args.file)
-        iscc_ = iscc.ISCC(args.no_distribution, args.folder, schedule, dic, operations, arrays_size, dep, operation_list)
+        schedule = []
+        dic = {}
+        operations = []
+        operation_list = []
+        arrays_size = {}
+        dep = []
+        
+        for id_statement, node in enumerate(nodes):
+            iterators_list = [b[0] for b in node.loop_bounds]
+            sched_entry = [0]
+            for it in iterators_list:
+                sched_entry.append(it)
+                sched_entry.append(0)
+            pragma = ["" for _ in iterators_list]
+            schedule.append([f"S{id_statement}", sched_entry, pragma])
+            
+            op_dict = {"+": 0, "-": 0, "*": 0, "/": 0}
+            op_list = []
+            for op in op_dict.keys():
+                count = node.computation.count(op)
+                op_dict[op] += count
+                for _ in range(count):
+                    op_list.append(op)
+            operations.append(op_dict)
+            operation_list.append(op_list)
+            
+            for inp, shape in node.inputs:
+                arrays_size[inp] = shape
+            for out, shape in node.outputs:
+                arrays_size[out] = shape
+                
+            LB_dict = {}
+            UB_dict = {}
+            TC_dict = {}
+            for b in node.loop_bounds:
+                LB_dict[b[0]] = b[1]
+                UB_dict[b[0]] = b[2] - 1  # upper bound is inclusive in Prometheus
+                TC_dict[b[0]] = b[2] - b[1]
+                
+            dic[id_statement] = {
+                "read": node.read_access,
+                "write": node.write_access,
+                "statement_body": node.computation,
+                "TC": TC_dict,
+                "LB": LB_dict,
+                "UB": UB_dict,
+                "LB_": LB_dict,
+                "UB_": UB_dict,
+                "constraint": []
+            }
+        iscc_ = None
     else:
-        os.system(f"cp {args.file} {args.folder}/new.cpp")
-        f = open(f"{args.folder}/new.cpp", "r")
-        lines = f.readlines()
-        f.close()
-        for i in range(len(lines)):
-            if "void" in lines[i] and "(" in lines[i] and ")" in lines[i]:
-                lines[i] = f"void kernel_nlp(" + lines[i].split("(")[1]
-                break
-        f = open(f"{args.folder}/new.cpp", "w")
-        f.writelines(lines)
-        f.close()
+        if not args.no_distribution:
+            schedule, dic, operations, arrays_size, dep, operation_list = extract.compute_statement(args.folder, args.file)
+            iscc_ = iscc.ISCC(args.no_distribution, args.folder, schedule, dic, operations, arrays_size, dep, operation_list)
+        else:
+            os.system(f"cp {args.file} {args.folder}/new.cpp")
+            f = open(f"{args.folder}/new.cpp", "r")
+            lines = f.readlines()
+            f.close()
+            for i in range(len(lines)):
+                if "void" in lines[i] and "(" in lines[i] and ")" in lines[i]:
+                    lines[i] = f"void kernel_nlp(" + lines[i].split("(")[1]
+                    break
+            f = open(f"{args.folder}/new.cpp", "w")
+            f.writelines(lines)
+            f.close()
 
 
-    schedule, dic, operations, arrays_size, dep, operation_list = extract.compute_statement(args.folder, f"{args.folder}/new.cpp")
+        schedule, dic, operations, arrays_size, dep, operation_list = extract.compute_statement(args.folder, f"{args.folder}/new.cpp")
 
 
     analysis = analysis_.Analysis(schedule, dic, operations, arrays_size, dep, operation_list)
@@ -119,18 +172,18 @@ if __name__ == "__main__":
     arguments = []
     # compute cte
 
-    f = open(args.file, "r")
-    lines = f.readlines()
-    f.close()
+    if not args.onnx_file:
+        f = open(args.file, "r")
+        lines = f.readlines()
+        f.close()
 
-
-    for line in lines:
-        if "void" in line and "(" in line and ")" in line:
-            cte = line.split("(")[1].split(")")[0].split(",")
-            for cc in cte:
-                if "[" not in cc:
-                    arguments.append(cc)
-            break
+        for line in lines:
+            if "void" in line and "(" in line and ")" in line:
+                cte = line.split("(")[1].split(")")[0].split(",")
+                for cc in cte:
+                    if "[" not in cc:
+                        arguments.append(cc)
+                break
 
     arguments += analysis.arguments
     name_function = "kernel_nlp"

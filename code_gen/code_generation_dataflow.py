@@ -1356,7 +1356,8 @@ class CodeGeneration:
                             original_def = arg
                             nname = arg.split(" ")[-1].split("[")[0]
                             nname = nname[1:] if nname.startswith("v") else nname
-                            original_name = f"v{nname}_for_task{first_read[nname]}"
+                            task_id_for_name = first_read[nname] if nname in first_read else first_write[nname]
+                            original_name = f"v{nname}_for_task{task_id_for_name}"
                             break
                     task_id = self.task_to_FT[task]
                     # for arg in self.arguments:
@@ -2636,7 +2637,8 @@ class CodeGeneration:
                     if key in old_arg:
                         type = old_arg.split(" ")[0]
                         size = old_arg[old_arg.index("[")+1:]
-                        new_name = f"{type} v{key}_for_task{first_read[key]}[{size}"
+                        task_id_for_name = first_read[key] if key in first_read else first_write[key]
+                        new_name = f"{type} v{key}_for_task{task_id_for_name}[{size}"
                         self.arguments += [new_name]
             else:
                 for old_arg in old_arguments:

@@ -1,4 +1,7 @@
 output_dir/
 gurobi.log
 *.log
-
+prometheus/
+__pycache__/
+*.pyc
+code_gen/__pycache__/
