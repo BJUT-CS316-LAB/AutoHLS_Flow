@@ -1,12 +1,54 @@
-output_dir/
-gurobi.log
-*.log
-hls_output/
+# [Python]
 __pycache__/
 *.pyc
-code_gen/__pycache__/*
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+
+# [Gurobi]
+gurobi.log
+
+# [Xilinx/HLS]
+*.log
+*.jou
+*.pb
+*.str
+*.tcl
+!write_tcl.py
+!script/**/*.tcl
+!evaluation/tcl_scripts/**/*.tcl
+output_dir/
+cfile/
+vitis_hls.log
+vivado.log
+vivado_hls.log
+hls_output/
+.Xil/
+
+# [IDE/OS]
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# [Others]
+graph.png
+*.swp
+*.swo
 onnx_files/
 dummy_deit.onnx
 build_*
-.Xil/
 tmp/
