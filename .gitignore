@@ -9,3 +9,4 @@ onnx_files/
 dummy_deit.onnx
 build_*
 .Xil/
+tmp/
