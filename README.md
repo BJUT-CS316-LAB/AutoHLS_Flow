@@ -24,7 +24,13 @@ AutoHLS_Flow is a holistic toolchain for automatic code generation for FPGA acce
 
 To run the framework seamlessly with PoCC, ISCC, AMPL, and Gurobi dependencies, we provide a pre-configured Docker image.
 
-**Start the Docker Container:**
+**1. Pull the Docker Image:**
+
+```bash
+docker pull ryanzhang511/autohls_flow_image:latest
+```
+
+**2. Start the Docker Container:**
 
 You must map your local directory to the container and provide your AMPL license UUID via an environment variable.
 
@@ -33,11 +39,12 @@ docker run -it -d \
   --name autohls_flow_container \
   -v /path/to/your/AutoHLS_Flow:/AutoHLS_Flow \
   -e AMPL_LIC_UUID="<your-ampl-license-uuid>" \
-  autohls_flow_image:latest \
+  ryanzhang511/autohls_flow_image:latest \
   /bin/bash
 ```
 
-Execute your commands inside the running container:
+**3. Enter the Container:**
+
 ```bash
 docker exec -it autohls_flow_container /bin/bash
 cd /AutoHLS_Flow
