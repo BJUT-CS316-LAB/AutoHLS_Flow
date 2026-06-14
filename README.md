@@ -22,13 +22,44 @@ AutoHLS_Flow is a holistic toolchain for automatic code generation for FPGA acce
 - Clang-format (for formatting the output code)
 - AMD Vitis HLS (for synthesis and CSIM)
 
-To run PoCC and ISCC, please use the provided Docker container, as the Python code assumes these tools are executed from within the Docker environment. You can pull the latest image with:
+To run the framework seamlessly with PoCC, ISCC, AMPL, and Gurobi dependencies, we provide a pre-configured Docker image.
+
+**Start the Docker Container:**
+
+You must map your local directory to the container and provide your AMPL license UUID via an environment variable.
 
 ```bash
-docker pull ghcr.io/ucla-vast/pocc:latest
+docker run -it -d \
+  --name autohls_flow_container \
+  -v /path/to/your/AutoHLS_Flow:/AutoHLS_Flow \
+  -e AMPL_LIC_UUID="<your-ampl-license-uuid>" \
+  autohls_flow_image:latest \
+  /bin/bash
+```
+
+Execute your commands inside the running container:
+```bash
+docker exec -it autohls_flow_container /bin/bash
+cd /AutoHLS_Flow
 ```
 
 ### 2. Example Usage
+
+**Example A: Generating HLS from an ONNX Model**
+
+```bash
+python main.py \
+  --onnx_file dummy_deit.onnx \
+  --SLR 3 \
+  --DSP 1440 \
+  --MAX_BUFFER_SIZE 512 \
+  --ON_CHIP_MEM_SIZE 8192 \
+  --MAX_UF 32 \
+  --code_generation \
+  --folder hls_output_onnx
+```
+
+**Example B: Generating HLS from an Affine C/C++ Kernel**
 
 ```bash
 python main.py \
@@ -41,7 +72,7 @@ python main.py \
   --ON_CHIP_MEM_SIZE 8192 \
   --MAX_UF 32 \
   --code_generation \
-  --folder hls_output
+  --folder hls_output_c
 ```
 
 ## ⚙️ Command-Line Arguments
