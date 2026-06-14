@@ -1,9 +1,10 @@
-# Prometheus: Automatic HLS Optimization and Code Generation Framework
+# AutoHLS_Flow: Automatic HLS Optimization and Code Generation Framework
 
-Prometheus is a holistic toolchain for automatic code generation for FPGA accelerators. It focuses on High-Level Synthesis (HLS) from affine C/C++ kernels and leverages optimization techniques to generate efficient hardware implementations.
+AutoHLS_Flow is a holistic toolchain for automatic code generation for FPGA accelerators. It supports both High-Level Synthesis (HLS) from affine C/C++ kernels and direct mapping from ONNX neural network models, leveraging mathematical optimization techniques to generate efficient hardware implementations.
 
 ## ✨ Key Features
 
+- Direct parsing and mapping of **ONNX models** to optimized HLS-C++ pipelines.
 - Support for **affine C/C++ kernels** with static loop bounds.
 - Automatic **loop scheduling**, **pragmas insertion**, and **code generation**.
 - Integration with **AMPL** for **Nonlinear Programming (NLP)**-based resource allocation.
@@ -40,22 +41,18 @@ python main.py \
   --ON_CHIP_MEM_SIZE 8192 \
   --MAX_UF 32 \
   --code_generation \
-  --folder output_dir
+  --folder hls_output
 ```
-
-### 3. Evaluation
-
-Please find the folder evaluation.
 
 ## ⚙️ Command-Line Arguments
 
 | Argument                 | Description                                                                 |
 |--------------------------|-----------------------------------------------------------------------------|
 | `--file`                 | Path to the input C/C++ kernel                                              |
-| `--folder`               | Output folder for generated code and reports                               |
+| `--folder`               | Output folder for generated code and reports (default: `hls_output`)        |
 | `--name_function`        | Kernel function name (default: `kernel_nlp`)                               |
 | `--SLR`                  | Number of available Super Logic Regions                                    |
-| `--DSP`                  | Total number of DSP slices available                                       |
+| `--DSP`                  | Total number of available DSP slices                                       |
 | `--BRAM`, `--FF`, `--LUT`| FPGA resource budgets (optional)                                           |
 | `--MAX_BUFFER_SIZE`      | Maximum allowed on-chip buffer size per array                             |
 | `--ON_CHIP_MEM_SIZE`     | Total available on-chip memory                                             |

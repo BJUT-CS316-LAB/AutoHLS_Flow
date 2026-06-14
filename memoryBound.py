@@ -154,7 +154,8 @@ class memoryBound:
         pos = nx.spring_layout(G)  # positions for all nodes
         nx.draw(G, pos, with_labels=True, arrows=True)
         # save
-        plt.savefig("graph.png")
+        import os
+        plt.savefig(os.path.join(self.folder, "graph.png"))
 
 
     def compute_inter_task_dependance(self):
@@ -1470,7 +1471,9 @@ class memoryBound:
         
 
         header = ["#option solver baron;", "#option baron_options 'maxtime=60 trace=nlp.trace sumfile=nlp.sum';"]
-        header += ["option solver gurobi;", "option gurobi_options 'lim:time=169200 tech:logfile=gurobi.log qp:nonconvex=2';"]
+        import os
+        gurobi_log_path = os.path.join(self.folder, "gurobi.log")
+        header += ["option solver gurobi;", f"option gurobi_options 'lim:time=169200 tech:logfile={gurobi_log_path} qp:nonconvex=2';"]
         header += ["#option solver octeract;", "#option octeract_options 'max_solver_time=60';"]
 
         

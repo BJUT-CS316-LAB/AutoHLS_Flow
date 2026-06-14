@@ -38,10 +38,10 @@ class SplitPerSLR:
         self.read_files()
         self.update_header()
         self.write_files()
-        self.update_prometheus()
+        self.update_hls_run()
 
-    def update_prometheus(self):
-        script = "/".join(self.cfile.split("/")[0:-2]) + "/prometheus.sh"
+    def update_hls_run(self):
+        script = "/".join(self.cfile.split("/")[0:-2]) + "/hls_run.sh"
         f = open(script, "r")
         lines = f.readlines()
         f.close()
@@ -299,7 +299,7 @@ class SplitPerSLR:
         lines = lines[0:begin_def]
         for line in defi:
             lines.append(line + "\n")
-        lines.append("#endif // PROMETHEUS_H\n")
+        lines.append("#endif // AUTOHLS_FLOW_H\n")
         f = open(self.cfile.replace(".cpp", ".h"), "w")
         for line in lines:
             f.write(line)

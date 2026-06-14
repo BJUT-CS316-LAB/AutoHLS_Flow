@@ -55,15 +55,16 @@ if __name__ == "__main__":
     parser.add_argument("--MAX_UF", type=int, default=0, help="Number of SLR. Default is 3")
     parser.add_argument("--ON_CHIP_MEM_SIZE", type=int, default=0, help="Number of SLR. Default is 3")
     parser.add_argument("--DSP", type=int, default=0, help="Number of SLR. Default is 3")
+    parser.add_argument("--device", type=str, default=None, help="Target device profile (e.g., AC7t1500)")
 
 
-    parser.add_argument("--folder", type=str, default="prometheus", help="Name of the folder to store the files. Default is 'prometheus'")
+    parser.add_argument("--folder", type=str, default="hls_output", help="Name of the folder to store the files. Default is 'hls_output'")
     argcomplete.autocomplete(parser)
     args = parser.parse_args()
 
     output = f"{args.folder}/src/output.cpp"
     host_name = f"{args.folder}/src/host.cpp"
-    # os.system(f"rm -rf prometheus")
+    # os.system(f"rm -rf hls_output")
     os.makedirs(args.folder, exist_ok=True)
     os.makedirs(f"{args.folder}/tmp", exist_ok=True)
     os.makedirs(f"{args.folder}/src", exist_ok=True)
@@ -79,7 +80,10 @@ if __name__ == "__main__":
     os.system(f"cp script/vitis.tcl {args.folder}/src")
     os.system(f"cp script/csim.tcl {args.folder}/src")
 
-    os.system(f"cp script/prometheus.sh {args.folder}/")
+    os.system(f"cp script/hls_run.sh {args.folder}/")
+    os.system(f"cp script/Makefile {args.folder}/")
+    os.system(f"cp script/build.tcl {args.folder}/")
+    os.system(f"cp script/hls_config_slr0.cfg {args.folder}/")
     os.system(f"cp script/xcl2* {args.folder}/src")
 
     nlp_file = f"{args.folder}/nlp.mod"
@@ -87,7 +91,7 @@ if __name__ == "__main__":
 
     if args.onnx_file:
         import onnx_frontend
-        nodes = onnx_frontend.parse_onnx_to_prometheus(args.onnx_file)
+        nodes = onnx_frontend.parse_onnx_to_hls(args.onnx_file)
         
         schedule = []
         dic = {}
@@ -98,7 +102,7 @@ if __name__ == "__main__":
         
         for id_statement, node in enumerate(nodes):
             iterators_list = [b[0] for b in node.loop_bounds]
-            sched_entry = [0]
+            sched_entry = [id_statement]
             for it in iterators_list:
                 sched_entry.append(it)
                 sched_entry.append(0)
@@ -125,7 +129,7 @@ if __name__ == "__main__":
             TC_dict = {}
             for b in node.loop_bounds:
                 LB_dict[b[0]] = b[1]
-                UB_dict[b[0]] = b[2] - 1  # upper bound is inclusive in Prometheus
+                UB_dict[b[0]] = b[2] - 1  # upper bound is inclusive in AutoHLS_Flow
                 TC_dict[b[0]] = b[2] - b[1]
                 
             dic[id_statement] = {
@@ -191,6 +195,13 @@ if __name__ == "__main__":
     pragmas_top = False
 
     res = ressources.Ressources()
+    if args.device == "AC7t1500":
+        res.SLR = 3
+        res.ON_CHIP_MEM_SIZE = 25559040  # 195 Mb in bytes
+        res.DSP = 2560  # MLP blocks
+        res.factor = 1.0
+        print(f"[Device Config] Loaded Achronix AC7t1500 profile: SLR={res.SLR}, Mem={res.ON_CHIP_MEM_SIZE} bytes, DSP={res.DSP}")
+
     if args.SLR != 0:
         res.SLR = args.SLR
     if args.factor != 0:
