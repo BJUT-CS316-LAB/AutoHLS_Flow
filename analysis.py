@@ -218,7 +218,7 @@ class Analysis:
                     order_loop = self.schedule[stat][1][1::2]
                     order_access = []
                     for i in range(len(arrays)):
-                        if array in arrays[i]:
+                        if array == arrays[i].split("[")[0]:
                             order_access = self.extract_iterator(arrays[i])
                     dimension_iterate_per_order[array].append([stat, order_loop, order_access])
             if len(dimension_iterate_per_order[array]) > 0:
