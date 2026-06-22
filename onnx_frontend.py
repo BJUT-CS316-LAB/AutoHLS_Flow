@@ -71,8 +71,8 @@ def parse_onnx_to_hls(onnx_path="deit_model.onnx"):
         print("[Warning] No MatMul nodes found in ONNX. Returning Mock DeiT layer.")
         return mock_deit_layer()
 
-    # We will compile the first 3 MatMul nodes (representing Q, K, V projections in Attention)
-    target_nodes = matmul_nodes[:3]
+    # We will compile all MatMul nodes
+    target_nodes = matmul_nodes
     print(f"[ONNX Frontend] Selected {len(target_nodes)} target nodes for HLS compilation:")
     for t_node in target_nodes:
         print(f"  - {t_node.name}")

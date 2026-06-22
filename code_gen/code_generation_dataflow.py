@@ -418,9 +418,10 @@ class CodeGeneration:
                     if int(loop) in loops:
                         id_schedule = id_sched
                         break
-                if arr not in list(info[id_schedule].keys()):
-                    info[id_schedule][arr] = {}
-                info[id_schedule][arr][dim] = loop
+                if id_schedule != -1:
+                    if arr not in list(info[id_schedule].keys()):
+                        info[id_schedule][arr] = {}
+                    info[id_schedule][arr][dim] = loop
         #now we try to reduce the level of reuse
         for id_ft in list(self.fuse_task.keys()):
             inf = {}
@@ -1570,33 +1571,48 @@ class CodeGeneration:
                 name_array = original_name.split("_")[0]
                 name_array = name_array[1:] if name_array.startswith("v") else name_array
 
-                size_ = 1
-                for k in range(len(self.info_padding[id_ft][name_array])-1):
-                    size_ *= self.info_padding[id_ft][name_array][k]
-                size_ *= int(np.ceil(self.info_padding[id_ft][name_array][-1]/self.burst.get(name_array, 1)))
+                has_padding = False
+                padding_key = name_array
+                if id_ft in self.info_padding:
+                    if name_array in self.info_padding[id_ft]:
+                        has_padding = True
+                        padding_key = name_array
+                    elif name_array.startswith("v") and name_array[1:] in self.info_padding[id_ft]:
+                        has_padding = True
+                        padding_key = name_array[1:]
+                    elif f"v{name_array}" in self.info_padding[id_ft]:
+                        has_padding = True
+                        padding_key = f"v{name_array}"
 
-                loops_of_stat = self.schedule[id_task][1::2]
-                nb_dim = len(self.info_padding[id_ft][name_array])
-                loop_last_dim = -1
-                info_arr2 = self.array_information[name_array]['loop_to_dim']
-                for ll in loops_of_stat:
-                    if int(ll) in list(info_arr2.keys()):
-                        if info_arr2[int(ll)] == nb_dim-1:
-                            if f"cte_burst_without_tiling_TC{ll}_for_{name_array}" in list(self.info_log.keys()):
-                                loop_last_dim = int(ll)
-                                break
+                if has_padding:
+                    size_ = 1
+                    for k in range(len(self.info_padding[id_ft][padding_key])-1):
+                        size_ *= self.info_padding[id_ft][padding_key][k]
+                    size_ *= int(np.ceil(self.info_padding[id_ft][padding_key][-1]/self.burst.get(padding_key, 1)))
 
-                if int(self.info_log[f"cte_burst_without_tiling_TC{loop_last_dim}_for_{name_array}"]) > 1:
-                    if int(self.info_log[f"{name_array}_is_fully_transfered_on_last_dim_FT{id_ft}"]) == 1:
-                        size_2 = 1
-                        for k in range(len(self.info_padding[id_ft][name_array])-1):
-                            size_2 *= self.info_padding[id_ft][name_array][k]
-                        size_2 *= (int(self.info_log[f"TC{loop_last_dim}"]) + int(self.info_log[f"cte_burst_without_tiling_TC{loop_last_dim}_for_{name_array}"]))
-                        size_2 /= self.burst.get(name_array, 1)
-                        if size_2 > size_:
-                            size_ = int(size_2)
+                    loops_of_stat = self.schedule[id_task][1::2]
+                    nb_dim = len(self.info_padding[id_ft][padding_key])
+                    loop_last_dim = -1
+                    info_arr2 = self.array_information.get(padding_key, {}).get('loop_to_dim', {})
+                    for ll in loops_of_stat:
+                        if int(ll) in list(info_arr2.keys()):
+                            if info_arr2[int(ll)] == nb_dim-1:
+                                if f"cte_burst_without_tiling_TC{ll}_for_{padding_key}" in list(self.info_log.keys()):
+                                    loop_last_dim = int(ll)
+                                    break
 
-                # size_ = self.size_arrays[array] // self.burst[array]
+                    if f"cte_burst_without_tiling_TC{loop_last_dim}_for_{padding_key}" in self.info_log and f"{padding_key}_is_fully_transfered_on_last_dim_FT{id_ft}" in self.info_log:
+                        if int(self.info_log[f"cte_burst_without_tiling_TC{loop_last_dim}_for_{padding_key}"]) > 1:
+                            if int(self.info_log[f"{padding_key}_is_fully_transfered_on_last_dim_FT{id_ft}"]) == 1:
+                                size_2 = 1
+                                for k in range(len(self.info_padding[id_ft][padding_key])-1):
+                                    size_2 *= self.info_padding[id_ft][padding_key][k]
+                                size_2 *= (int(self.info_log[f"TC{loop_last_dim}"]) + int(self.info_log[f"cte_burst_without_tiling_TC{loop_last_dim}_for_{padding_key}"]))
+                                size_2 /= self.burst.get(padding_key, 1)
+                                if size_2 > size_:
+                                    size_ = int(size_2)
+                else:
+                    size_ = self.size_arrays.get(array, 0) // self.burst.get(array, 1)
                 code += f"{shift}for (int i = 0; i < {size_}; i++){{\n"
                 code += f"{shift}#pragma HLS pipeline II=1\n"
                 
@@ -1633,8 +1649,24 @@ class CodeGeneration:
             name_arr = name_arr[1:] if name_arr.startswith("v") else name_arr
             id_task = original_name.split("for_task")[-1]
             id_ft = self.task_to_FT[int(id_task)]
-            tc_arr = list(map(int, self.info_padding[id_ft][name_arr]))
-            size_arr = np.prod(tc_arr)
+            has_padding = False
+            padding_key = name_arr
+            if id_ft in self.info_padding:
+                if name_arr in self.info_padding[id_ft]:
+                    has_padding = True
+                    padding_key = name_arr
+                elif name_arr.startswith("v") and name_arr[1:] in self.info_padding[id_ft]:
+                    has_padding = True
+                    padding_key = name_arr[1:]
+                elif f"v{name_arr}" in self.info_padding[id_ft]:
+                    has_padding = True
+                    padding_key = f"v{name_arr}"
+
+            if has_padding:
+                tc_arr = list(map(int, self.info_padding[id_ft][padding_key]))
+                size_arr = np.prod(tc_arr)
+            else:
+                size_arr = self.size_arrays.get(array, 0)
             code += f"{shift}for (int i = 0; i < {min(self.size_arrays[array],size_arr) // self.burst.get(array, 1)}; i++){{\n"
             code += f"{shift}#pragma HLS pipeline II=1\n"
             
@@ -2298,7 +2330,7 @@ class CodeGeneration:
                 prev_size = []
 
                 for prev_id_fuse_task in range(id_fuse_task-1, -1, -1):
-                    if name_array in list(self.info_padding[prev_id_fuse_task].keys()):
+                    if prev_id_fuse_task in self.info_padding and name_array in self.info_padding[prev_id_fuse_task]:
                         is_write = False
                         for id_task in self.fuse_task[prev_id_fuse_task]:
                             if id_task in self.array_information[name_array]["W"]:
@@ -2315,7 +2347,7 @@ class CodeGeneration:
                     #find what task transfer to us
                     id_previous_ft = -1
                     for id_previous_ft_ in range(id_fuse_task-1, -1, -1):
-                        if name_array in list(self.info_padding[id_previous_ft_].keys()):
+                        if id_previous_ft_ in self.info_padding and name_array in self.info_padding[id_previous_ft_]:
                             is_write = False
                             for id_task in self.fuse_task[id_previous_ft_]:
                                 if id_task in self.array_information[name_array]["W"]:

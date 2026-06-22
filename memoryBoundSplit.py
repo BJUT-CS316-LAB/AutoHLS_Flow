@@ -341,7 +341,7 @@ class memoryBound:
             w = self.analysis.dic[id_sched]["write"]
             randw = r + w
             for r in randw:
-                if array in r:
+                if array == r.split("[")[0]:
                     return id_sched
         return -1
 
@@ -352,7 +352,7 @@ class memoryBound:
             w = self.analysis.dic[id_sched]["write"]
             randw = r + w
             for r in randw:
-                if array in r:
+                if array == r.split("[")[0]:
                     l += [id_sched]
         return l
 
@@ -365,7 +365,7 @@ class memoryBound:
                 w = self.info_loops[task2]["write"]
                 randw = r + w
                 for r in randw:
-                    if arr in r:
+                    if arr == r.split("[")[0]:
                         it_array = self.extract_iterators(r)
                         cur_loop = self.schedule[task2][1::2]
                         for loop in cur_loop:
@@ -656,11 +656,11 @@ class memoryBound:
                                                 r_2 = self.info_loops[k2-1]["read"]
 
                                                 for r__1 in r_1+w_1:
-                                                    if r_k.split("[")[0] in r__1:
+                                                    if r_k.split("[")[0] == r__1.split("[")[0]:
                                                         it_1 = self.extract_iterators(r__1)
                                                         break
                                                 for r__2 in r_2+w_2:
-                                                    if r_k2.split("[")[0] in r__2:
+                                                    if r_k2.split("[")[0] == r__2.split("[")[0]:
                                                         it_2 = self.extract_iterators(r__2)
                                                         break
                                                 
@@ -1440,7 +1440,7 @@ class memoryBound:
         header = ["#option solver baron;", "#option baron_options 'maxtime=60 trace=nlp.trace sumfile=nlp.sum';"]
         import os
         gurobi_log_path = os.path.join(self.folder, "gurobi.log")
-        header += ["option solver gurobi;", f"option gurobi_options 'lim:time=169200 tech:logfile={gurobi_log_path} qp:nonconvex=2';"]
+        header += ["option solver gurobi;", f"option gurobi_options 'lim:time=180 mipgap=0.05 tech:logfile={gurobi_log_path} qp:nonconvex=2';"]
         header += ["#option solver octeract;", "#option octeract_options 'max_solver_time=60';"]
 
         
@@ -1493,7 +1493,7 @@ class memoryBound:
                 write = self.analysis.dic[key]["write"]
                 randw = read + write
                 for r in randw:
-                    if array in r:
+                    if array == r.split("[")[0]:
                         its = self.extract_iterators(r)
 
                         loops = self.schedule[key][1::2]
@@ -1707,7 +1707,7 @@ class memoryBound:
                 write = self.analysis.dic[key]["write"]
                 randw = read + write
                 for r in randw:
-                    if array in r:
+                    if array == r.split("[")[0]:
                         if r in write:
                             is_write[array] = True
                         
@@ -1747,7 +1747,7 @@ class memoryBound:
                     write = self.analysis.dic[key]["write"]
                     randw = read + write
                     for r in randw:
-                        if array in r:
+                        if array == r.split("[")[0]:
                             id_fused_task = -1
                             for id_, dd in enumerate(self.what_is_fuse()):
                                 if key in dd:
@@ -1757,7 +1757,7 @@ class memoryBound:
                                     if cons not in var:
                                         var.append(cons)
                         if array not in already_seen:
-                            if array in r:
+                            if array == r.split("[")[0]:
                                 footprint_array[array] = np.prod(self.analysis.arrays_size[array])
                                 if footprint_array[array] % 16 == 0:
                                     burst_size[array] =  16
@@ -1845,7 +1845,7 @@ class memoryBound:
                 write = self.analysis.dic[key]["write"]
                 randw = read + write
                 for r in randw:
-                    if array in r:
+                    if array == r.split("[")[0]:
                         schedule_with_array.append(key)
                         curr_perm.append(perms[key])
                         break
